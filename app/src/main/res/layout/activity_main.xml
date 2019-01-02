@@ -87,6 +87,8 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:cursorVisible="true"
             android:text="Register now!"
             android:textColor="@android:color/black"
             android:textSize="18sp"
