@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "445139569231",
+    "firebase_url": "https://streetexpress-24dd3.firebaseio.com",
+    "project_id": "streetexpress-24dd3",
+    "storage_bucket": "streetexpress-24dd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445139569231:android:38163c2d30230510",
+        "android_client_info": {
+          "package_name": "com.example.administrator.streetfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445139569231-cdmiuk5u2mqsifaensha3n03cicvcrrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTrRAbIaFguk_JZpq-HKjCr3GIY0Z5voA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
