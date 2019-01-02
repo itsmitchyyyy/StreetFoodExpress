@@ -28,8 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         switch(id){
             case R.id.textView4:
-                Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show();
-                break;
+                Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(registerIntent);
+                finish();
         }
     }
 }
