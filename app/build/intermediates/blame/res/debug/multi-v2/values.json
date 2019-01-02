@@ -133,20 +133,20 @@
                 {
                     "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\StreetFood\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "376"
+                        "startLines": "3,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "57,384",
+                        "endLines": "8,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "376,668"
                     },
                     "to": {
-                        "startLines": "1849",
-                        "startColumns": "4",
-                        "startOffsets": "108783",
-                        "endLines": "1854",
-                        "endColumns": "12",
-                        "endOffsets": "109097"
+                        "startLines": "1849,3316",
+                        "startColumns": "4,4",
+                        "startOffsets": "108783,208094",
+                        "endLines": "1854,3320",
+                        "endColumns": "12,12",
+                        "endOffsets": "109097,208374"
                     }
                 }
             ]
