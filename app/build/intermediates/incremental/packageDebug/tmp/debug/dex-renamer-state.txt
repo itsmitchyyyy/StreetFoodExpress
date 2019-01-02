@@ -1,4 +1,4 @@
-#Wed Jan 02 21:33:26 SGT 2019
+#Wed Jan 02 21:46:02 SGT 2019
 base.0=C\:\\Users\\Administrator\\AndroidStudioProjects\\StreetFood\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
