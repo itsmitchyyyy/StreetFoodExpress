@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button backBtn, nextBtn;
     LinearLayout frstStep, scndStep;
+    EditText birthDate;
     private int steps = 3;
     private int currentStep = 1;
 
@@ -23,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         nextBtn = this.findViewById(R.id.button3);
         frstStep = this.findViewById(R.id.firstStep);
         scndStep = this.findViewById(R.id.secondStep);
+        birthDate = this.findViewById(R.id.editText7);
 
         backBtn.setEnabled(false);
 
@@ -62,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         backBtn.setEnabled(true);
                         break;
                 }
-
+                break;
         }
     }
 }
