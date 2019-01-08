@@ -45,33 +45,6 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Email"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/secondStep"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:visibility="gone">
 
         <TextView
             android:layout_width="match_parent"
@@ -104,6 +77,19 @@
 
         </RadioGroup>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
@@ -119,6 +105,39 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:onClick="showDatePickerDialog" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Password"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPassword" />
 
 
     </LinearLayout>
@@ -140,8 +159,7 @@
                 style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Back"
-                />
+                android:text="Cancel" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -153,6 +171,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Next" />
+
         </LinearLayout>
     </LinearLayout>
 

@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1087244693703",
+    "firebase_url": "https://streetfoodproject-c0770.firebaseio.com",
+    "project_id": "streetfoodproject-c0770",
+    "storage_bucket": "streetfoodproject-c0770.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087244693703:android:38163c2d30230510",
+        "android_client_info": {
+          "package_name": "com.example.administrator.streetfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087244693703-o5omo2s7bg4u6cpt8nsnhavg2ekbcdm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl8ofadirtD8nnLR_I1Ll9sPDpEVX-4Kg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087244693703:android:96b4312d039c74ad",
+        "android_client_info": {
+          "package_name": "com.example.madi.firestoresample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087244693703-o5omo2s7bg4u6cpt8nsnhavg2ekbcdm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl8ofadirtD8nnLR_I1Ll9sPDpEVX-4Kg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
