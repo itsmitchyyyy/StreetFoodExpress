@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\58e0e7d959df6df5f6fa4e5f5da75b39\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\c100390e5c3860d982e740bc46e7cff7\AndroidManifest.xml:17:1-22:12
@@ -34,29 +34,29 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Madi\.gradle\cach
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\dd4c1b407fa45b58a02d46b50bd3fc47\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\598a69689839fcb2de0450c1d61372de\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\298667e501d595d9dcb99df470a4ab85\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:5:5-83
+ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
 		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:7:5-23:19
+ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:7:5-24:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\4ef44745189fe680c8b9838f73651f54\AndroidManifest.xml:9:5-20
@@ -98,9 +98,13 @@ ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\An
 	android:name
 		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:21:19-47
 activity#com.example.administrator.streetfood.RegisterActivity
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:22:9-63
+ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:22:9-54
 	android:name
 		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:22:19-51
+activity#com.example.administrator.streetfood.OrderActivity
+ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:23:9-60
+	android:name
+		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:23:19-48
 uses-sdk
 INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml

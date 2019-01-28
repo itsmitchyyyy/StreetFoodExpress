@@ -29,6 +29,7 @@
         </activity>
         <activity android:name="com.example.administrator.streetfood.MainActivity" />
         <activity android:name="com.example.administrator.streetfood.RegisterActivity" />
+        <activity android:name="com.example.administrator.streetfood.OrderActivity" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
