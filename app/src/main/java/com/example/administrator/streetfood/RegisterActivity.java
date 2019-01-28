@@ -4,51 +4,47 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.Layout;
 import android.text.TextWatcher;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
     Button backBtn, nextBtn;
     LinearLayout frstStep, scndStep;
     EditText birthDate, firstName, lastName, emailAddress, password;
     RadioGroup radioGroup;
     RadioButton radioGenderButton;
-
+    CustomProgressDialog customProgressDialog;
     private int currentStep = 1;
-    private FirebaseAuth firebaseAuth;
+    private String gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration);
+
+        customProgressDialog = new CustomProgressDialog().getInstance();
 
         backBtn = this.findViewById(R.id.button2);
         nextBtn = this.findViewById(R.id.button3);
@@ -63,6 +59,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         backBtn.setOnClickListener(this);
         nextBtn.setOnClickListener(this);
+        radioGroup.setOnCheckedChangeListener(this);
         nextBtn.setEnabled(false);
 
         firstName.addTextChangedListener(textWatcher);
@@ -71,13 +68,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         password.addTextChangedListener(textWatcher);
         birthDate.addTextChangedListener(textWatcher);
 
-        firebaseAuth = FirebaseAuth.getInstance();
     }
 
     private final TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+            if(frstStep.getVisibility() == View.VISIBLE){
+                if (!firstName.getText().toString().isEmpty() ||
+                        !lastName.getText().toString().isEmpty()){
+                    nextBtn.setEnabled(true);
+                }
+            }
         }
 
         @Override
@@ -89,7 +90,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         public void afterTextChanged(Editable s) {
             if(frstStep.getVisibility() == View.VISIBLE){
                 if (firstName.getText().toString().isEmpty() ||
-                        lastName.getText().toString().isEmpty()){
+                        lastName.getText().toString().isEmpty() ||
+                        radioGroup.getCheckedRadioButtonId() == -1
+                        ){
                     nextBtn.setEnabled(false);
                 } else {
                     nextBtn.setEnabled(true);
@@ -106,88 +109,44 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
         }
     };
-//
-//    @Override
-//    protected void onStar
-//
-//
-// t() {
-//        super.onStart();
-//        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-//        if (firebaseUser != null) {
-//            //Loggedin user
-//        }
-//    }
-
-    private void sendVerificationEmail() {
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-        currentUser.sendEmailVerification()
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this,"A verification has been sent to your email", Toast.LENGTH_SHORT).show();
-                            firebaseAuth.signOut();
-                            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                            finish();
-                        } else {
-                            Toast.makeText(RegisterActivity.this, "Email not sent", Toast.LENGTH_SHORT).show();
-                            overridePendingTransition(0,0);
-                            finish();
-                            overridePendingTransition(0,0);
-                            startActivity(getIntent());
-                        }
-                    }
-                });
-    }
 
     private void registerUser() {
         final String frstName = firstName.getText().toString().trim();
         final String lstName = lastName.getText().toString().trim();
         final String email = emailAddress.getText().toString().trim();
         final String bday = birthDate.getText().toString().trim();
-        String pass = password.getText().toString().trim();
-        int selectedGender = radioGroup.getCheckedRadioButtonId();
-        radioGenderButton = this.findViewById(selectedGender);
-        final String gender = radioGenderButton.getText().toString().trim();
+        final String pass = password.getText().toString().trim();
 
-        progressLoader().show();
-        firebaseAuth.createUserWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()) {
-                            //save data
-                            Map<String, Object> user = new HashMap<>();
-                            user.put("firstname", frstName);
-                            user.put("lastname", lstName);
-                            user.put("birthday", bday);
-                            user.put("gender", gender);
-                            user.put("email", email);
+        customProgressDialog.showProgress(RegisterActivity.this);
+        String url = "http://192.168.0.10/streetfood/customer/insert.php";
+        RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
+        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(RegisterActivity.this, "Registration Success", Toast.LENGTH_SHORT).show();
+                customProgressDialog.hideProgress();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(RegisterActivity.this, "An error occurred while registering", Toast.LENGTH_SHORT).show();
+                customProgressDialog.hideProgress();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<String, String>();
+                map.put("firstName", frstName);
+                map.put("lastName", lstName);
+                map.put("gender", gender);
+                map.put("birthdate", bday);
+                map.put("email", email);
+                map.put("password", pass);
 
-                            FirebaseFirestore.getInstance()
-                                    .collection("users")
-                                    .add(user)
-                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                        @Override
-                                        public void onSuccess(DocumentReference documentReference) {
-                                            sendVerificationEmail();
-//                                            Toast.makeText(RegisterActivity.this, "Registration successful. A verification has been sent to your email", Toast.LENGTH_SHORT).show();
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(RegisterActivity.this, "An error occured", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                        } else {
-                            Toast.makeText(RegisterActivity.this, "Error registering user", Toast.LENGTH_SHORT).show();
-                        }
-                        progressLoader().dismiss();
-                    }
-                });
-
+                return map;
+            }
+        };
+        queue.add(request);
     }
 
     public void showDatePickerDialog(View v){
@@ -246,12 +205,19 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private ProgressDialog progressLoader() {
-        final ProgressDialog pd = new ProgressDialog(RegisterActivity.this);
-        pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        pd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        pd.setIndeterminate(true);
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+         int radioGenderButtonId = group.getCheckedRadioButtonId();
+         radioGenderButton = group.findViewById(radioGenderButtonId);
+        if(checkedId == -1){
+            nextBtn.setEnabled(false);
+        }else {
+            gender = radioGenderButton.getText().toString().trim();
+            if(!firstName.getText().toString().isEmpty() ||
+                    !lastName.getText().toString().isEmpty()) {
+                nextBtn.setEnabled(true);
+            }
+        }
 
-        return pd;
     }
 }

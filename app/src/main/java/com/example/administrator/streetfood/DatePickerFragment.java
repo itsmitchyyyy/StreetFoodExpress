@@ -24,6 +24,6 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     @SuppressLint("DefaultLocale")
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-        ((EditText)getActivity().findViewById(R.id.editText7)).setText(String.format("%d-%d-%d", month + 1, dayOfMonth, year));
+        ((EditText)getActivity().findViewById(R.id.editText7)).setText(String.format("%d-%d-%d", year, month + 1, dayOfMonth));
     }
 }
