@@ -4,8 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -27,14 +29,13 @@ public class OrderActivity extends AppCompatActivity {
         totalAmount = findViewById(R.id.textView4);
 
         listView.setAdapter(orderListAdapter);
-        totalAmount.setText(Integer.toString(getTotalAmount()));
+        orderListAdapter.setOnDataChangeListener(new OrderListAdapter.OnDataChangeListener() {
+            @Override
+            public void onDataChanged() {
+                double totalOrderAmount = orderListAdapter.getTotalAmount(orderList);
+                totalAmount.setText(String.format(Locale.getDefault(), "%.2f", totalOrderAmount));
+            }
+        });
     }
 
-    public int getTotalAmount() {
-        int totalAmount = 0;
-        for (Order order: orderList) {
-            totalAmount += order.getOrderAmount();
-        }
-        return totalAmount;
-    }
 }

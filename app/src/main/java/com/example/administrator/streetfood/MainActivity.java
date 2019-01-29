@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,9 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         switch(id){
             case R.id.button:
-                Intent testIntent = new Intent(MainActivity.this, OrderActivity.class);
-                startActivity(testIntent);
-                finish();
+
                 break;
             case R.id.textView2:
                 Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);

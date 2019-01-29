@@ -544,6 +544,10 @@
         "source": "C:\\Users\\Madi\\AndroidStudioProjects\\StreetFoodExpress\\app\\src\\main\\res\\layout\\registration.xml"
     },
     {
+        "merged": "C:\\Users\\Madi\\AndroidStudioProjects\\StreetFoodExpress\\app\\build\\intermediates\\res\\merged\\debug\\layout_connection_checker_layout.xml.flat",
+        "source": "C:\\Users\\Madi\\AndroidStudioProjects\\StreetFoodExpress\\app\\src\\main\\res\\layout\\connection_checker_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Madi\\AndroidStudioProjects\\StreetFoodExpress\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\58e0e7d959df6df5f6fa4e5f5da75b39\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },

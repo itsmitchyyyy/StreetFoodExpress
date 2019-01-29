@@ -820,6 +820,7 @@ id textSpacerNoTitle
 id textView
 id textView10
 id textView11
+id textView12
 id textView2
 id textView3
 id textView4
@@ -876,6 +877,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_order
 layout app_start
+layout connection_checker_layout
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
