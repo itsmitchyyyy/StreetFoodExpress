@@ -1,29 +1,41 @@
 package com.example.administrator.streetfood;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
     TextView registerNowButton;
     Button loginButton;
+    NetworkJob networkJob;
+    EditText editTextEmail, editTextPassword;
+    CustomerServer customerServer;
 
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        customerServer = new CustomerServer(this);
+        networkJob = new NetworkJob().getInstance();
+
+        editTextEmail = findViewById(R.id.editText3);
+        editTextPassword = findViewById(R.id.editText4);
         registerNowButton = this.findViewById(R.id.textView2);
         loginButton = this.findViewById(R.id.button);
 
         registerNowButton.setOnClickListener(this);
         loginButton.setOnClickListener(this);
+
+        networkJob.scheduleJob(this);
+
     }
 
     @Override
@@ -31,12 +43,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         switch(id){
             case R.id.button:
-
+                loginUser();
                 break;
             case R.id.textView2:
                 Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(registerIntent);
                 finish();
         }
+    }
+
+    public void loginUser() {
+        final String email = editTextEmail.getText().toString();
+        final String password = editTextPassword.getText().toString();
+        String url = "http://192.168.0.10/streetfood/login.php";
+        Customer customer = new Customer(email,password, null, null, null, null);
+        customerServer.loginCustomer(url, customer);
+    }
+
+    @Override
+    protected void onStop() {
+        stopService(new Intent(this, NetworkSchedulerService.class));
+        super.onStop();
+    }
+
+    @Override
+    protected void onStart() {
+        startService(new Intent(this, NetworkSchedulerService.class));
+        super.onStart();
     }
 }

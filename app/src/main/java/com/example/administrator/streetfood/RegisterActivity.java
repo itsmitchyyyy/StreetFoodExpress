@@ -1,9 +1,6 @@
 package com.example.administrator.streetfood;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,8 +17,6 @@ import android.widget.Toast;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -38,13 +33,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     CustomProgressDialog customProgressDialog;
     private int currentStep = 1;
     private String gender;
+    CustomerServer customerServer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration);
 
-        customProgressDialog = new CustomProgressDialog().getInstance();
+        customerServer = new CustomerServer(this);
+//        customProgressDialog = new CustomProgressDialog().getInstance();
 
         backBtn = this.findViewById(R.id.button2);
         nextBtn = this.findViewById(R.id.button3);
@@ -112,41 +109,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private void registerUser() {
         final String frstName = firstName.getText().toString().trim();
-        final String lstName = lastName.getText().toString().trim();
+        final String  lstName = lastName.getText().toString().trim();
         final String email = emailAddress.getText().toString().trim();
         final String bday = birthDate.getText().toString().trim();
         final String pass = password.getText().toString().trim();
 
-        customProgressDialog.showProgress(RegisterActivity.this);
         String url = "http://192.168.0.10/streetfood/customer/insert.php";
-        RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
-        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Toast.makeText(RegisterActivity.this, "Registration Success", Toast.LENGTH_SHORT).show();
-                customProgressDialog.hideProgress();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(RegisterActivity.this, "An error occurred while registering", Toast.LENGTH_SHORT).show();
-                customProgressDialog.hideProgress();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<String, String>();
-                map.put("firstName", frstName);
-                map.put("lastName", lstName);
-                map.put("gender", gender);
-                map.put("birthdate", bday);
-                map.put("email", email);
-                map.put("password", pass);
-
-                return map;
-            }
-        };
-        queue.add(request);
+        Customer customer = new Customer(email, pass, gender, bday, frstName, lstName);
+        customerServer.sendRequest(url, customer);
     }
 
     public void showDatePickerDialog(View v){
