@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.administrator.streetfood.Customer.Customer;
+import com.example.administrator.streetfood.Customer.CustomerServer;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView registerNowButton;
