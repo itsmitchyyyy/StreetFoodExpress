@@ -64,10 +64,10 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
                 getSupportFragmentManager().beginTransaction().replace(R.id.contentFrame, new OrderFragment()).commit();
                 break;
             case R.id.nav_logout:
-//                SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
-//                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                editor.clear();
-//                editor.apply();
+                SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
 
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();

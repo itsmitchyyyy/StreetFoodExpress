@@ -1,4 +1,4 @@
-package com.example.administrator.streetfood.Customer;
+package com.example.administrator.streetfood.Shared;
 
 import android.app.Dialog;
 import android.content.Context;

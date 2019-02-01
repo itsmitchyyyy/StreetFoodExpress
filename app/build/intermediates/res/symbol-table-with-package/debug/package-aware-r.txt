@@ -1002,6 +1002,7 @@ drawable app_start_laoder
 drawable app_start_loader
 drawable avd_hide_password
 drawable avd_show_password
+drawable cod
 drawable custom_progress_bar
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1030,6 +1031,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable paypallogo
+drawable rounded_button
+drawable rounded_button_active
 drawable streetfoodlogo
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1075,6 +1079,8 @@ id button3
 id button4
 id button5
 id button6
+id button7
+id button8
 id buttonPanel
 id cancel_action
 id center
@@ -1085,7 +1091,9 @@ id checkbox
 id chronometer
 id clip_horizontal
 id clip_vertical
+id codButton
 id collapseActionView
+id confirmPassword
 id container
 id content
 id contentFrame
@@ -1093,6 +1101,7 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
+id customerButton
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1111,6 +1120,7 @@ id editText5
 id editText6
 id editText7
 id editText8
+id editTextConfirmPassword
 id edit_query
 id end
 id end_padder
@@ -1176,6 +1186,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id paypalButton
 id percent
 id pin
 id progressBar
@@ -1185,6 +1196,7 @@ id radio
 id radioButton
 id radioButton2
 id radioGroup
+id radioGroupType
 id right
 id right_icon
 id right_side
@@ -1245,6 +1257,7 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView13
 id textView2
 id textView3
 id textView4
@@ -1273,6 +1286,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id vendorButton
 id view_offset_helper
 id visible
 id withText
@@ -1328,6 +1342,7 @@ layout abc_tooltip
 layout activity_drawer
 layout activity_main
 layout activity_order
+layout activity_payment
 layout app_start
 layout connection_checker_layout
 layout design_bottom_navigation_item

@@ -1,7 +1,10 @@
 package com.example.administrator.streetfood;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +14,8 @@ import android.widget.TextView;
 
 import com.example.administrator.streetfood.Customer.Customer;
 import com.example.administrator.streetfood.Customer.CustomerServer;
+
+import java.util.prefs.Preferences;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,7 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
+        if(sharedPreferences.getString("id", null) != null) {
+            startActivity(new Intent(this, ActivityDrawer.class));
+        }
+
         customerServer = new CustomerServer(this);
+
         networkJob = new NetworkJob().getInstance();
 
         editTextEmail = findViewById(R.id.editText3);

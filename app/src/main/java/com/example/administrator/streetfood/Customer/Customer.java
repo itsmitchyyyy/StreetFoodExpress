@@ -1,6 +1,8 @@
 package com.example.administrator.streetfood.Customer;
 
 public class Customer {
+
+    private final String TAG = "customer";
     private int id;
     private String email, password, gender, birthdate, firstname, lastname;
 
@@ -67,5 +69,9 @@ public class Customer {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    public String getTag() {
+        return TAG;
     }
 }
