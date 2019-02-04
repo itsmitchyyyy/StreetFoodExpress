@@ -1,6 +1,8 @@
 package com.example.administrator.streetfood.Payment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.braintreepayments.api.BraintreeFragment;
+import com.braintreepayments.api.exceptions.InvalidArgumentException;
 import com.example.administrator.streetfood.MainActivity;
 import com.example.administrator.streetfood.Order.OrderFragment;
 import com.example.administrator.streetfood.R;
@@ -28,7 +32,8 @@ public class PaymentActivity extends AppCompatActivity implements NavigationView
         setContentView(R.layout.activity_drawer);
 
         Bundle b = getIntent().getExtras();
-        if(!b.isEmpty()) {
+        assert b != null;
+        if(b.isEmpty()) {
             Toast.makeText(this, b.getString("totalAmount"), Toast.LENGTH_SHORT).show();
         }
 
@@ -48,6 +53,7 @@ public class PaymentActivity extends AppCompatActivity implements NavigationView
 
         navigationView.setNavigationItemSelectedListener(this);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -69,10 +75,10 @@ public class PaymentActivity extends AppCompatActivity implements NavigationView
                 getSupportFragmentManager().beginTransaction().replace(R.id.contentFrame, new OrderFragment()).commit();
                 break;
             case R.id.nav_logout:
-//                SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
-//                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                editor.clear();
-//                editor.apply();
+                SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
 
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();

@@ -61,6 +61,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\drop-in-3.7.1.aar\\d62fc75748b3b629dd5b36a54cd12c2d\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,11,17",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,535,923",
+                        "endLines": "10,16,27",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "530,918,1530"
+                    },
+                    "to": {
+                        "startLines": "319,328,334",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "22647,23127,23515",
+                        "endLines": "327,333,344",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "23122,23510,24122"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\51bb4d89793f17d4f42dbd57ca120618\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,10,18,26",

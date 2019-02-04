@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import com.example.administrator.streetfood.Customer.Customer;
 import com.example.administrator.streetfood.Customer.CustomerServer;
+import com.example.administrator.streetfood.Shared.DBConfig;
+import com.example.administrator.streetfood.Shared.Server;
+import com.example.administrator.streetfood.Shared.Users;
 
 import java.util.prefs.Preferences;
 
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     NetworkJob networkJob;
     EditText editTextEmail, editTextPassword;
     CustomerServer customerServer;
+    private Server server;
 
     @SuppressLint("NewApi")
     @Override
@@ -31,12 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
-        if(sharedPreferences.getString("id", null) != null) {
-            startActivity(new Intent(this, ActivityDrawer.class));
-        }
-
-        customerServer = new CustomerServer(this);
+//        customerServer = new CustomerServer(this);
+        server = new Server(this);
 
         networkJob = new NetworkJob().getInstance();
 
@@ -69,9 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void loginUser() {
         final String email = editTextEmail.getText().toString();
         final String password = editTextPassword.getText().toString();
-        String url = "http://192.168.0.10/streetfood/login.php";
-        Customer customer = new Customer(email,password, null, null, null, null);
-        customerServer.loginCustomer(url, customer);
+        String url = DBConfig.ServerURL+"login.php";
+        Users users = new Users(email, password, null, null, null, null, null);
+        //        Customer customer = new Customer(email,password, null, null, null, null);
+        server.login(url, users);
     }
 
     @Override

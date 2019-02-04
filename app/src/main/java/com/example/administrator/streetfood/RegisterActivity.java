@@ -20,6 +20,9 @@ import android.widget.Toast;
 import com.example.administrator.streetfood.Customer.Customer;
 import com.example.administrator.streetfood.Customer.CustomerServer;
 import com.example.administrator.streetfood.Shared.CustomProgressDialog;
+import com.example.administrator.streetfood.Shared.DBConfig;
+import com.example.administrator.streetfood.Shared.Server;
+import com.example.administrator.streetfood.Shared.Users;
 import com.example.administrator.streetfood.Vendor.Vendor;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
@@ -34,13 +37,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private String userType;
     CustomerServer customerServer;
     CustomProgressDialog customProgressDialog;
+    private String url;
+    private Server server;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration);
 
-        customerServer = new CustomerServer(this);
+//        customerServer = new CustomerServer(this);
+        server = new Server(this);
         customProgressDialog = new CustomProgressDialog().getInstance();
 
         backBtn = this.findViewById(R.id.button2);
@@ -124,15 +130,23 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         final String conPassword = confirmPassword.getText().toString();
 
         if(conPassword.equals(pass)) {
-            if(userType.equals("Customer")){
-                String url = "http://192.168.0.10/streetfood/customer/insert.php";
-                Customer customer = new Customer(email, pass, gender, bday, frstName, lstName);
-                customerServer.sendRequest(url, customer);
+            if (userType.equals("Customer")) {
+                url = DBConfig.ServerURL + "customer/insert.php";
             } else {
-                String url = "http://192.168.0.10/streetfood/vendor/insert.php";
-                Vendor vendor = new Vendor(email, pass, gender, bday, frstName, lstName);
-                /* TODO: VENDOR SERVER */
+                url = DBConfig.ServerURL + "vendor/insert.php";
             }
+
+            Users users = new Users(email, pass, gender, bday, frstName, lstName, userType);
+            server.sendRequest(url, users);
+//            if(userType.equals("Customer")){
+//                String url = "http://192.168.0.10/streetfood/customer/insert.php";
+//                Customer customer = new Customer(email, pass, gender, bday, frstName, lstName);
+//                customerServer.sendRequest(url, customer);
+//            } else {
+//                String url = "http://192.168.0.10/streetfood/vendor/insert.php";
+//                Vendor vendor = new Vendor(email, pass, gender, bday, frstName, lstName);
+//                /* TODO: VENDOR SERVER */
+//            }
         } else {
             Toast.makeText(this, "Password and Confirm password does not match", Toast.LENGTH_LONG).show();
         }
