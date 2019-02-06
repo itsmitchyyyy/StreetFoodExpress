@@ -16,10 +16,9 @@ import com.braintreepayments.api.BraintreeFragment;
 import com.braintreepayments.api.dropin.DropInActivity;
 import com.braintreepayments.api.dropin.DropInRequest;
 import com.braintreepayments.api.dropin.DropInResult;
-import com.braintreepayments.api.exceptions.InvalidArgumentException;
-import com.braintreepayments.api.interfaces.PaymentMethodNonceCreatedListener;
-import com.braintreepayments.api.models.PaymentMethodNonce;
 import com.example.administrator.streetfood.R;
+import com.example.administrator.streetfood.Shared.CustomProgressDialog;
+import com.example.administrator.streetfood.Shared.DBConfig;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.TextHttpResponseHandler;
 
@@ -29,6 +28,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class PaymentFragment extends Fragment {
 
+    private CustomProgressDialog customProgressDialog;
     ImageButton cashOnDelivery, onlinePayment;
     View paymentView;
     BraintreeFragment braintreeFragment;
@@ -43,6 +43,8 @@ public class PaymentFragment extends Fragment {
                              Bundle savedInstanceState) {
         paymentView = inflater.inflate(R.layout.activity_payment, container, false);
 
+        customProgressDialog = new CustomProgressDialog().getInstance();
+
         cashOnDelivery = paymentView.findViewById(R.id.codButton);
         onlinePayment = paymentView.findViewById(R.id.paypalButton);
 
@@ -55,16 +57,18 @@ public class PaymentFragment extends Fragment {
     }
 
     public void getClientToken() {
+        customProgressDialog.showProgress(getContext());
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("http://192.168.0.10/streetfood/payment/client-token.php", new TextHttpResponseHandler() {
+        client.get(DBConfig.ServerURL + "payment/client-token.php", new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Log.d("error", responseString);
+                customProgressDialog.hideProgress();
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
                 clientToken = responseString;
+                customProgressDialog.hideProgress();
             }
         });
     }

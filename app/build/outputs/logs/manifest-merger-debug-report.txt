@@ -1,331 +1,337 @@
 -- Merging decision tree log ---
 data
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:40:17-69
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:46:17-69
 	android:scheme
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:40:23-66
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:46:23-66
 manifest
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:2:1-32:12
-MERGED from [com.braintreepayments:card-form:3.5.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\card-form-3.5.0.aar\c4355edd307731b9b6338c51d2d29be4\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\51bb4d89793f17d4f42dbd57ca120618\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\58e0e7d959df6df5f6fa4e5f5da75b39\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\c100390e5c3860d982e740bc46e7cff7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\4ef44745189fe680c8b9838f73651f54\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b7bb1792ee2dbc265b19668c6b615b34\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\09e9ceed0bf354a291733011699404ce\AndroidManifest.xml:17:1-22:12
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:2:1-26:12
-MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\2ad466c3b9c0ea877cfa875bbe095fc5\AndroidManifest.xml:2:1-13:12
-MERGED from [com.braintreepayments.api:core:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\core-2.18.1.aar\eeb8cfdc2ba3d16e6a5ffef50e1da7c3\AndroidManifest.xml:2:1-11:12
-MERGED from [com.braintreepayments:browser-switch:0.1.7] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\browser-switch-0.1.7.aar\c04da644560bd5cf3944c6ec75e1ab1e\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:customtabs:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\d7619184fa50992b64a8e47b17f5cd85\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b8230314be144413497da742db2a4a5b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7b454c28c6e8bbbf7d0b3e7b789f08dd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d84e6041951f0b4629d85d14b3796087\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8d3f964d0dd7c47c27e3b54d31d420dc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\d4a8ca418afac6c2b9f416065294b419\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\2c7fca0217a08dcbb442b16747846e59\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\24a641586233d4b6f505d233bf2b59ba\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\932ce6c924b096b6f359d0604e04803a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\3cb91773333d49b631caa5e5512a259d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\5351023d04fa1355a8f1d8b2879d1c8d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\22b50bd94bc290c9e9e0178b30c96c66\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\461b361f143b77eb7015abe90d49b621\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\85fd0b0fe9ec68542f8ef06c1084f7b7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\c617d860b76d1f34a436699bb46241a9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b8a305ba33c709f0b6e33058bbed6600\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\e0b7cd0869744f89f61dbff00e3a33a9\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c3e89c57e9ad64fa7e42c5b23c61a509\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\50bd05839278b59832e0d7b6d870771b\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\972eea89fe888810be6e8a89e241e4cd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0eda9b0c2eb4d801ba979de67bbd1adb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\57d5bd7cba11b66df35bcc52d34596ec\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f172bf74eafb6018129479481d576a2f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c6ce5cc50df948e1d8ec2f9703ce9b69\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d54763d10e91ff470da70eb9e1e35e85\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\dd4c1b407fa45b58a02d46b50bd3fc47\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\598a69689839fcb2de0450c1d61372de\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\298667e501d595d9dcb99df470a4ab85\AndroidManifest.xml:17:1-22:12
-MERGED from [com.braintreepayments.api:visa-checkout:1.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\visa-checkout-1.0.0.aar\e391bcdfb4169a2b315cb4eacf8a32d5\AndroidManifest.xml:2:1-12:12
-MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\534d2f8004326c58bca10e85d6304ab3\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:2:1-32:12
+MERGED from [com.braintreepayments:card-form:3.5.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\card-form-3.5.0.aar\fe707ef88addbc49b8b03b18c44eead5\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\36611830f4d8108dccdd6174e1d43660\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\ede3e1dc064c10e9f92568a499f70be7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\5671d51c9ad90045ec79fa77c89f755d\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\f955895e169b41966d0cb2db61de11da\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\89ca7c8e961975cbd9969d8d349eb8c9\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\f4aa662df76a40208723e03c74f3f543\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\08fc60715c92d521419d1563c9c73860\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\4950b7d46fbd577cfd975a601b9d0a1b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:2:1-26:12
+MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\4d8b913e2a2fabb819277b7a99924821\AndroidManifest.xml:2:1-13:12
+MERGED from [com.braintreepayments.api:core:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\core-2.18.1.aar\06c87ee5d07350f5a1997890c6aa8fc3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.braintreepayments:browser-switch:0.1.7] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\browser-switch-0.1.7.aar\4c2690ede9241956684e9f1ac6f2cdaa\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:customtabs:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\e2fcf0723c84f75521a250811f9d9a73\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\44c2a43ffb5d0d674975ff8ae4fcdd5d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\95ccf76ce8a2f263953c0d4afb736ded\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f0134c51519dab6b8df63562e8590e42\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3af3ef6647d485868904534a22e96604\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\53894527b5a1ff4b2bc091f86efd8553\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\df789166917a08a03c7be6b97302f598\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7c57c1b0a8cf02df58ac9c0dbc3027be\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\cafb3a521733e4bae7ee4a045aa96cf2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b2a860069a2e01766b651b69ce4033e9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ac3410f7bade93df628cd7b912e234c8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1883709393ef742504559d06bfe3879c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\228fc437ed87a9f050cd86c7a3e9f11c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\09b7bce202d1e5b521e945f4359bc83a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\8fa058ca21d6ee31a6017241abe8410d\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\cfba255fb45fda4cb806afe0e55a811b\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\f5c020a7c40d055dfa232aefbc7a7929\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3ccedeb1f93d1b25ca3afb49db3b915e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0f1194dddab64df1072445b6b62992f9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\385619bd801f73f7f72c235b3e25d5fd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\35beb5dac67915b35149cceaf6714861\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\629acaba2080b03abcb7e0ace800a3a6\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\69e28a634bd23e221e9d6daf5d537235\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\94d8b7c93a6235f911d06b897e5831cd\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\e2d71e6604294848f4d1463f5c111c21\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0a79a8432949c7b61817ac47120f3313\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3695044d7661dac5bf5c549571ca6b5f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.braintreepayments.api:visa-checkout:1.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\visa-checkout-1.0.0.aar\1bf0b703626c376b93596bdfffc34db6\AndroidManifest.xml:2:1-12:12
+MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\246743528c92250c9860023569de03c8\AndroidManifest.xml:2:1-13:12
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:3:5-51
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:1-45:12
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:1-51:12
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:5:5-67
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:13:5-67
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:13:5-67
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:12:5-67
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:12:5-67
-MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\2ad466c3b9c0ea877cfa875bbe095fc5\AndroidManifest.xml:11:5-67
-MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\2ad466c3b9c0ea877cfa875bbe095fc5\AndroidManifest.xml:11:5-67
-MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\534d2f8004326c58bca10e85d6304ab3\AndroidManifest.xml:11:5-67
-MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\534d2f8004326c58bca10e85d6304ab3\AndroidManifest.xml:11:5-67
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:13:5-67
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:13:5-67
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:12:5-67
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:12:5-67
+MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\4d8b913e2a2fabb819277b7a99924821\AndroidManifest.xml:11:5-67
+MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\4d8b913e2a2fabb819277b7a99924821\AndroidManifest.xml:11:5-67
+MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\246743528c92250c9860023569de03c8\AndroidManifest.xml:11:5-67
+MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\246743528c92250c9860023569de03c8\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:6:5-79
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:12:5-79
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:12:5-79
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:11:5-79
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:11:5-79
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:6:5-79
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:12:5-79
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:12:5-79
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:11:5-79
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:7:5-68
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:7:5-68
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:7:22-65
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:7:22-65
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:8:5-65
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:8:5-66
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:8:22-63
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:8:22-63
 application
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:10:5-43:19
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:15:5-30:19
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:15:5-30:19
-MERGED from [com.android.support:design:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\51bb4d89793f17d4f42dbd57ca120618\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\51bb4d89793f17d4f42dbd57ca120618\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\4ef44745189fe680c8b9838f73651f54\AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\4ef44745189fe680c8b9838f73651f54\AndroidManifest.xml:9:5-20
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:14:5-24:19
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:14:5-24:19
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b8a305ba33c709f0b6e33058bbed6600\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b8a305ba33c709f0b6e33058bbed6600\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\e0b7cd0869744f89f61dbff00e3a33a9\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\e0b7cd0869744f89f61dbff00e3a33a9\AndroidManifest.xml:22:5-23:19
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:10:5-49:19
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:15:5-30:19
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:15:5-30:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\36611830f4d8108dccdd6174e1d43660\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\36611830f4d8108dccdd6174e1d43660\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\5671d51c9ad90045ec79fa77c89f755d\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\5671d51c9ad90045ec79fa77c89f755d\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\89ca7c8e961975cbd9969d8d349eb8c9\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\89ca7c8e961975cbd9969d8d349eb8c9\AndroidManifest.xml:9:5-20
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:14:5-24:19
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:14:5-24:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\8fa058ca21d6ee31a6017241abe8410d\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\8fa058ca21d6ee31a6017241abe8410d\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\cfba255fb45fda4cb806afe0e55a811b\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\cfba255fb45fda4cb806afe0e55a811b\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b8a305ba33c709f0b6e33058bbed6600\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\8fa058ca21d6ee31a6017241abe8410d\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:13:9-41
 	tools:ignore
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:17:9-39
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:17:9-39
 	android:roundIcon
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:16:9-40
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:16:9-40
+activity#com.example.administrator.streetfood.VendorActivityDrawer
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:17:9-67
+	android:name
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:17:19-55
 activity#com.example.administrator.streetfood.AppStartActivity
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:18:9-26:20
+	android:noHistory
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:17:19-51
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:19:13-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:24:27-74
 activity#com.example.administrator.streetfood.MainActivity
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:24:9-50
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:27:9-50
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:24:19-47
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:27:19-47
 activity#com.example.administrator.streetfood.RegisterActivity
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:25:9-54
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:28:9-54
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:25:19-51
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:28:19-51
 service#com.example.administrator.streetfood.NetworkSchedulerService
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:27:9-30:72
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:30:9-33:72
 	android:exported
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:29:13-36
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:32:13-36
 	android:permission
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:30:13-69
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:33:13-69
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:28:13-52
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:31:13-52
 activity#com.example.administrator.streetfood.ActivityDrawer
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:32:9-52
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:35:9-52
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:32:19-49
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:35:19-49
 activity#com.example.administrator.streetfood.Payment.PaymentActivity
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:33:9-60
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:36:9-61
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:33:19-58
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:36:19-58
 activity#com.braintreepayments.api.BraintreeBrowserSwitchActivity
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:34:9-42:20
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:37:9-48:20
 	android:launchMode
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:35:13-44
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:39:13-44
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:34:19-90
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:38:13-84
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:com.example.administrator.streetfood.braintree
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:36:13-41:29
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:40:13-47:29
 action#android.intent.action.VIEW
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:37:17-69
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:37:25-66
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:38:17-76
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:43:17-76
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:38:27-73
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:43:27-73
 category#android.intent.category.BROWSABLE
-ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:39:17-78
+ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:44:17-78
 	android:name
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml:39:27-75
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml:44:27-75
 uses-sdk
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:8:5-10:41
-MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:8:5-10:41
-MERGED from [com.braintreepayments:card-form:3.5.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\card-form-3.5.0.aar\c4355edd307731b9b6338c51d2d29be4\AndroidManifest.xml:7:5-9:41
-MERGED from [com.braintreepayments:card-form:3.5.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\card-form-3.5.0.aar\c4355edd307731b9b6338c51d2d29be4\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\51bb4d89793f17d4f42dbd57ca120618\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\51bb4d89793f17d4f42dbd57ca120618\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\58e0e7d959df6df5f6fa4e5f5da75b39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\58e0e7d959df6df5f6fa4e5f5da75b39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a58b54ed83780c5037189e5edd4b582b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\c100390e5c3860d982e740bc46e7cff7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\c100390e5c3860d982e740bc46e7cff7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\4ef44745189fe680c8b9838f73651f54\AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\4ef44745189fe680c8b9838f73651f54\AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b7bb1792ee2dbc265b19668c6b615b34\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b7bb1792ee2dbc265b19668c6b615b34\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\09e9ceed0bf354a291733011699404ce\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\09e9ceed0bf354a291733011699404ce\AndroidManifest.xml:20:5-44
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:7:5-9:41
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:7:5-9:41
-MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\2ad466c3b9c0ea877cfa875bbe095fc5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\2ad466c3b9c0ea877cfa875bbe095fc5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.braintreepayments.api:core:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\core-2.18.1.aar\eeb8cfdc2ba3d16e6a5ffef50e1da7c3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.braintreepayments.api:core:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\core-2.18.1.aar\eeb8cfdc2ba3d16e6a5ffef50e1da7c3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.braintreepayments:browser-switch:0.1.7] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\browser-switch-0.1.7.aar\c04da644560bd5cf3944c6ec75e1ab1e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.braintreepayments:browser-switch:0.1.7] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\browser-switch-0.1.7.aar\c04da644560bd5cf3944c6ec75e1ab1e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:customtabs:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\d7619184fa50992b64a8e47b17f5cd85\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customtabs:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\d7619184fa50992b64a8e47b17f5cd85\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b8230314be144413497da742db2a4a5b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b8230314be144413497da742db2a4a5b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7b454c28c6e8bbbf7d0b3e7b789f08dd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7b454c28c6e8bbbf7d0b3e7b789f08dd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d84e6041951f0b4629d85d14b3796087\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d84e6041951f0b4629d85d14b3796087\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8d3f964d0dd7c47c27e3b54d31d420dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8d3f964d0dd7c47c27e3b54d31d420dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\d4a8ca418afac6c2b9f416065294b419\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\d4a8ca418afac6c2b9f416065294b419\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\2c7fca0217a08dcbb442b16747846e59\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\2c7fca0217a08dcbb442b16747846e59\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\24a641586233d4b6f505d233bf2b59ba\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\24a641586233d4b6f505d233bf2b59ba\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\932ce6c924b096b6f359d0604e04803a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\932ce6c924b096b6f359d0604e04803a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\3cb91773333d49b631caa5e5512a259d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\3cb91773333d49b631caa5e5512a259d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\5351023d04fa1355a8f1d8b2879d1c8d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\5351023d04fa1355a8f1d8b2879d1c8d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\22b50bd94bc290c9e9e0178b30c96c66\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\22b50bd94bc290c9e9e0178b30c96c66\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\461b361f143b77eb7015abe90d49b621\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\461b361f143b77eb7015abe90d49b621\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\85fd0b0fe9ec68542f8ef06c1084f7b7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\85fd0b0fe9ec68542f8ef06c1084f7b7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\c617d860b76d1f34a436699bb46241a9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\c617d860b76d1f34a436699bb46241a9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b8a305ba33c709f0b6e33058bbed6600\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b8a305ba33c709f0b6e33058bbed6600\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\e0b7cd0869744f89f61dbff00e3a33a9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\e0b7cd0869744f89f61dbff00e3a33a9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c3e89c57e9ad64fa7e42c5b23c61a509\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c3e89c57e9ad64fa7e42c5b23c61a509\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\50bd05839278b59832e0d7b6d870771b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\50bd05839278b59832e0d7b6d870771b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\972eea89fe888810be6e8a89e241e4cd\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\972eea89fe888810be6e8a89e241e4cd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0eda9b0c2eb4d801ba979de67bbd1adb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0eda9b0c2eb4d801ba979de67bbd1adb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\57d5bd7cba11b66df35bcc52d34596ec\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\57d5bd7cba11b66df35bcc52d34596ec\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f172bf74eafb6018129479481d576a2f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f172bf74eafb6018129479481d576a2f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c6ce5cc50df948e1d8ec2f9703ce9b69\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c6ce5cc50df948e1d8ec2f9703ce9b69\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d54763d10e91ff470da70eb9e1e35e85\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d54763d10e91ff470da70eb9e1e35e85\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\dd4c1b407fa45b58a02d46b50bd3fc47\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\dd4c1b407fa45b58a02d46b50bd3fc47\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\598a69689839fcb2de0450c1d61372de\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\598a69689839fcb2de0450c1d61372de\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\298667e501d595d9dcb99df470a4ab85\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\298667e501d595d9dcb99df470a4ab85\AndroidManifest.xml:20:5-44
-MERGED from [com.braintreepayments.api:visa-checkout:1.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\visa-checkout-1.0.0.aar\e391bcdfb4169a2b315cb4eacf8a32d5\AndroidManifest.xml:8:5-10:41
-MERGED from [com.braintreepayments.api:visa-checkout:1.0.0] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\visa-checkout-1.0.0.aar\e391bcdfb4169a2b315cb4eacf8a32d5\AndroidManifest.xml:8:5-10:41
-MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\534d2f8004326c58bca10e85d6304ab3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\534d2f8004326c58bca10e85d6304ab3\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:8:5-10:41
+MERGED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:8:5-10:41
+MERGED from [com.braintreepayments:card-form:3.5.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\card-form-3.5.0.aar\fe707ef88addbc49b8b03b18c44eead5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.braintreepayments:card-form:3.5.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\card-form-3.5.0.aar\fe707ef88addbc49b8b03b18c44eead5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\36611830f4d8108dccdd6174e1d43660\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\36611830f4d8108dccdd6174e1d43660\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\ede3e1dc064c10e9f92568a499f70be7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\ede3e1dc064c10e9f92568a499f70be7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\5671d51c9ad90045ec79fa77c89f755d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\5671d51c9ad90045ec79fa77c89f755d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\f955895e169b41966d0cb2db61de11da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\f955895e169b41966d0cb2db61de11da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\89ca7c8e961975cbd9969d8d349eb8c9\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\89ca7c8e961975cbd9969d8d349eb8c9\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\f4aa662df76a40208723e03c74f3f543\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\f4aa662df76a40208723e03c74f3f543\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\08fc60715c92d521419d1563c9c73860\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\08fc60715c92d521419d1563c9c73860\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\4950b7d46fbd577cfd975a601b9d0a1b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\4950b7d46fbd577cfd975a601b9d0a1b\AndroidManifest.xml:20:5-44
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:7:5-9:41
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:7:5-9:41
+MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\4d8b913e2a2fabb819277b7a99924821\AndroidManifest.xml:7:5-9:41
+MERGED from [com.paypal.android.sdk:paypal-one-touch:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\paypal-one-touch-2.18.1.aar\4d8b913e2a2fabb819277b7a99924821\AndroidManifest.xml:7:5-9:41
+MERGED from [com.braintreepayments.api:core:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\core-2.18.1.aar\06c87ee5d07350f5a1997890c6aa8fc3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.braintreepayments.api:core:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\core-2.18.1.aar\06c87ee5d07350f5a1997890c6aa8fc3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.braintreepayments:browser-switch:0.1.7] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\browser-switch-0.1.7.aar\4c2690ede9241956684e9f1ac6f2cdaa\AndroidManifest.xml:7:5-9:41
+MERGED from [com.braintreepayments:browser-switch:0.1.7] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\browser-switch-0.1.7.aar\4c2690ede9241956684e9f1ac6f2cdaa\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:customtabs:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\e2fcf0723c84f75521a250811f9d9a73\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\e2fcf0723c84f75521a250811f9d9a73\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\44c2a43ffb5d0d674975ff8ae4fcdd5d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\44c2a43ffb5d0d674975ff8ae4fcdd5d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\95ccf76ce8a2f263953c0d4afb736ded\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\95ccf76ce8a2f263953c0d4afb736ded\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f0134c51519dab6b8df63562e8590e42\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f0134c51519dab6b8df63562e8590e42\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3af3ef6647d485868904534a22e96604\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3af3ef6647d485868904534a22e96604\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\53894527b5a1ff4b2bc091f86efd8553\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\53894527b5a1ff4b2bc091f86efd8553\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\df789166917a08a03c7be6b97302f598\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\df789166917a08a03c7be6b97302f598\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7c57c1b0a8cf02df58ac9c0dbc3027be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7c57c1b0a8cf02df58ac9c0dbc3027be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\cafb3a521733e4bae7ee4a045aa96cf2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\cafb3a521733e4bae7ee4a045aa96cf2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b2a860069a2e01766b651b69ce4033e9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b2a860069a2e01766b651b69ce4033e9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ac3410f7bade93df628cd7b912e234c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ac3410f7bade93df628cd7b912e234c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1883709393ef742504559d06bfe3879c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1883709393ef742504559d06bfe3879c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\228fc437ed87a9f050cd86c7a3e9f11c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\228fc437ed87a9f050cd86c7a3e9f11c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\09b7bce202d1e5b521e945f4359bc83a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\09b7bce202d1e5b521e945f4359bc83a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\8fa058ca21d6ee31a6017241abe8410d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\8fa058ca21d6ee31a6017241abe8410d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\cfba255fb45fda4cb806afe0e55a811b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\cfba255fb45fda4cb806afe0e55a811b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\f5c020a7c40d055dfa232aefbc7a7929\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\f5c020a7c40d055dfa232aefbc7a7929\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3ccedeb1f93d1b25ca3afb49db3b915e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\3ccedeb1f93d1b25ca3afb49db3b915e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0f1194dddab64df1072445b6b62992f9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0f1194dddab64df1072445b6b62992f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\385619bd801f73f7f72c235b3e25d5fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\385619bd801f73f7f72c235b3e25d5fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\35beb5dac67915b35149cceaf6714861\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\35beb5dac67915b35149cceaf6714861\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\629acaba2080b03abcb7e0ace800a3a6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\629acaba2080b03abcb7e0ace800a3a6\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\69e28a634bd23e221e9d6daf5d537235\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\69e28a634bd23e221e9d6daf5d537235\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\94d8b7c93a6235f911d06b897e5831cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\94d8b7c93a6235f911d06b897e5831cd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\e2d71e6604294848f4d1463f5c111c21\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\e2d71e6604294848f4d1463f5c111c21\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0a79a8432949c7b61817ac47120f3313\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0a79a8432949c7b61817ac47120f3313\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3695044d7661dac5bf5c549571ca6b5f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3695044d7661dac5bf5c549571ca6b5f\AndroidManifest.xml:20:5-44
+MERGED from [com.braintreepayments.api:visa-checkout:1.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\visa-checkout-1.0.0.aar\1bf0b703626c376b93596bdfffc34db6\AndroidManifest.xml:8:5-10:41
+MERGED from [com.braintreepayments.api:visa-checkout:1.0.0] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\visa-checkout-1.0.0.aar\1bf0b703626c376b93596bdfffc34db6\AndroidManifest.xml:8:5-10:41
+MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\246743528c92250c9860023569de03c8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.paypal.android.sdk:data-collector:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\data-collector-2.18.1.aar\246743528c92250c9860023569de03c8\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		ADDED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Works\streetfoodexpress\app\src\main\AndroidManifest.xml
 activity#com.braintreepayments.api.threedsecure.ThreeDSecureWebViewActivity
-ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:18:9-20:62
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:21:9-103
-MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:21:9-103
+ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:18:9-20:62
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:21:9-103
+MERGED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:21:9-103
 	android:theme
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:20:13-59
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:20:13-59
 	android:name
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:19:13-94
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:19:13-94
 activity#com.braintreepayments.api.dropin.DropInActivity
-ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:21:9-23:64
+ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:21:9-23:64
 	android:theme
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:23:13-61
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:23:13-61
 	android:name
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:22:13-75
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:22:13-75
 activity#com.braintreepayments.api.dropin.AddCardActivity
-ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:24:9-26:65
+ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:24:9-26:65
 	android:theme
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:26:13-62
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:26:13-62
 	android:name
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:25:13-76
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:25:13-76
 activity#com.braintreepayments.api.dropin.VaultManagerActivity
-ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:27:9-29:70
+ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:27:9-29:70
 	android:theme
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:29:13-67
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:29:13-67
 	android:name
-		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\d62fc75748b3b629dd5b36a54cd12c2d\AndroidManifest.xml:28:13-81
+		ADDED from [com.braintreepayments.api:drop-in:3.7.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\drop-in-3.7.1.aar\76f07fcf0d5b12cf25abdec84e948216\AndroidManifest.xml:28:13-81
 activity#com.braintreepayments.api.AndroidPayActivity
-ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:15:9-17:62
+ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:15:9-17:62
 	android:theme
-		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:17:13-59
+		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:17:13-59
 	android:name
-		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:16:13-72
+		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:16:13-72
 activity#com.braintreepayments.api.GooglePaymentActivity
-ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:18:9-20:62
+ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:18:9-20:62
 	android:theme
-		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:20:13-59
+		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:20:13-59
 	android:name
-		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:19:13-75
+		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:19:13-75
 service#com.braintreepayments.api.internal.AnalyticsIntentService
-ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:23:9-93
+ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:23:9-93
 	android:name
-		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\Madi\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\2e92b8a22f9ad8b9f34d8ca4ca60c086\AndroidManifest.xml:23:18-90
+		ADDED from [com.braintreepayments.api:braintree:2.18.1] C:\Users\mars\.gradle\caches\transforms-1\files-1.1\braintree-2.18.1.aar\768f449001e198f622b69cf45e248cfb\AndroidManifest.xml:23:18-90

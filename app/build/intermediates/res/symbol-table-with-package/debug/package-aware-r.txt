@@ -1262,6 +1262,7 @@ id button5
 id button6
 id button7
 id button8
+id button9
 id buttonPanel
 id cancel_action
 id center
@@ -1329,6 +1330,7 @@ id ifRoom
 id image
 id imageView
 id imageView2
+id imageView3
 id info
 id invisible
 id italic
@@ -1371,6 +1373,7 @@ id paypalButton
 id percent
 id pin
 id progressBar
+id progressBar2
 id progress_circular
 id progress_horizontal
 id radio
@@ -1439,6 +1442,10 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView14
+id textView15
+id textView16
+id textView17
 id textView2
 id textView3
 id textView4
@@ -1468,6 +1475,11 @@ id unlabeled
 id up
 id useLogo
 id vendorButton
+id vendorContentFrame
+id vendorListView
+id vendorListViewRefresh
+id vendorNavView
+id vendor_nav_drawer
 id view_offset_helper
 id visible
 id withText
@@ -1525,6 +1537,7 @@ layout activity_drawer
 layout activity_main
 layout activity_order
 layout activity_payment
+layout activity_vendor_drawer
 layout app_start
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -1557,6 +1570,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_vendor_order_list
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1576,12 +1590,14 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout order_layout
 layout progress_dialog
+layout progress_dialog_horizontal
 layout registration
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout toolbar
+layout vendor_order
 menu bt_card_io
 menu nav_menu
 mipmap ic_launcher

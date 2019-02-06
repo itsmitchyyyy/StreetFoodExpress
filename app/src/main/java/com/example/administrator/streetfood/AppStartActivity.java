@@ -7,6 +7,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.Objects;
+
 public class AppStartActivity extends AppCompatActivity {
 
     @Override
@@ -16,15 +18,15 @@ public class AppStartActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
         if(sharedPreferences.getString("id", null) != null)
-            startActivity(new Intent(this, ActivityDrawer.class));
+            if (Objects.equals(sharedPreferences.getString("type", null), "Customer"))
+                startActivity(new Intent(this, ActivityDrawer.class));
+            else
+                startActivity(new Intent(this, VendorActivityDrawer.class));
         else
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent intent = new Intent(AppStartActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
+            new Handler().postDelayed(() -> {
+                Intent intent = new Intent(AppStartActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }, 3000);
 
     }

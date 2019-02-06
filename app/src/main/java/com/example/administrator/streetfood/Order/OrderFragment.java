@@ -4,6 +4,7 @@ package com.example.administrator.streetfood.Order;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +13,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.administrator.streetfood.Payment.PaymentActivity;
+import com.example.administrator.streetfood.Product.Product;
+import com.example.administrator.streetfood.Product.ProductServer;
 import com.example.administrator.streetfood.R;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -24,11 +28,12 @@ public class OrderFragment extends Fragment {
 
     ListView listView;
     OrderListAdapter orderListAdapter;
-    ArrayList<Order> orderList = new ArrayList<Order>();
+    ArrayList<Product> productList = new ArrayList<>();
     TextView totalAmount;
     Button payButton;
 
     private double totalOrderAmount;
+    private ProductServer productServer;
 
     public OrderFragment() {
         // Required empty public constructor
@@ -41,24 +46,34 @@ public class OrderFragment extends Fragment {
 
         View orderView = inflater.inflate(R.layout.activity_order, container, false);
 
-        orderList.add(new Order(1, 1, 20, R.drawable.streetfoodlogo, 20.00, "2019-01-01", "Taho"));
-        orderList.add(new Order(2, 2, 30, R.drawable.streetfoodlogo, 30.00, "2019-02-02", "Chicharon"));
+        productServer = new ProductServer(getContext());
 
-        orderListAdapter = new OrderListAdapter(orderView.getContext(), orderList);
         listView = orderView.findViewById(R.id.listView1);
         totalAmount = orderView.findViewById(R.id.textView4);
         payButton = orderView.findViewById(R.id.button5);
 
-        listView.setAdapter(orderListAdapter);
+        productServer.viewAll(new ProductServer.VolleyCallBack() {
+            @Override
+            public void onSuccess(String result) {
 
-        orderListAdapter.setOnDataChangeListener(() -> {
-            totalOrderAmount = orderListAdapter.getTotalAmount(orderList);
-            totalAmount.setText(String.format(Locale.getDefault(), "%.2f", totalOrderAmount));
+            }
 
-            if (totalOrderAmount == 0.00) {
-                payButton.setEnabled(false);
-            } else {
-                payButton.setEnabled(true);
+            @Override
+            public void onProductQuery(List<Product> list) {
+                productList.addAll(list);
+                orderListAdapter = new OrderListAdapter(orderView.getContext(), productList);
+                listView.setAdapter(orderListAdapter);
+
+                orderListAdapter.setOnDataChangeListener(() -> {
+                    totalOrderAmount = orderListAdapter.getTotalAmount(productList);
+                    totalAmount.setText(String.format(Locale.getDefault(), "%.2f", totalOrderAmount));
+
+                    if (totalOrderAmount == 0.00) {
+                        payButton.setEnabled(false);
+                    } else {
+                        payButton.setEnabled(true);
+                    }
+                });
             }
         });
 
@@ -70,5 +85,4 @@ public class OrderFragment extends Fragment {
 
         return orderView;
     }
-
 }

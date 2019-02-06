@@ -10,12 +10,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Objects;
 
-public class OrderListAdapter extends ArrayAdapter<Order> {
+public class OrderListAdapter extends ArrayAdapter<Product> {
 
     public interface OnDataChangeListener {
         void onDataChanged();
@@ -32,7 +34,7 @@ public class OrderListAdapter extends ArrayAdapter<Order> {
     }
 
 
-    public OrderListAdapter(Context context, ArrayList<Order> resource) {
+    public OrderListAdapter(Context context, ArrayList<Product> resource) {
         super(context, 0, resource);
     }
 
@@ -42,7 +44,7 @@ public class OrderListAdapter extends ArrayAdapter<Order> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final Order order = getItem(position);
+        final Product product = getItem(position);
 
         final ViewHolder viewHolder;
         if(convertView == null) {
@@ -60,52 +62,44 @@ public class OrderListAdapter extends ArrayAdapter<Order> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.orderImage.setImageResource(order.getProductImage());
-        viewHolder.orderName.setText(order.getOrderName());
-        viewHolder.orderPrice.setText(String.format(Locale.getDefault(),"%.2f", order.getProductPrice()));
+//        viewHolder.orderImage.setImageResource(Integer.parseInt(product.getProdImage()));
+        viewHolder.orderName.setText(Objects.requireNonNull(product).getProdName());
+        viewHolder.orderPrice.setText(String.format(Locale.getDefault(),"%.2f", product.getProdPrice()));
 
-        viewHolder.btnIncrement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int currentQuantity = Integer.parseInt(viewHolder.stepCounter.getText().toString());
+        viewHolder.btnIncrement.setOnClickListener(v -> {
+            int currentQuantity = Integer.parseInt(viewHolder.stepCounter.getText().toString());
 
-                if(currentQuantity <  100) {
-                    currentQuantity+= 1;
-                    viewHolder.stepCounter.setText(Integer.toString(currentQuantity));
+            if(currentQuantity <  100) {
+                currentQuantity+= 1;
+                viewHolder.stepCounter.setText(String.format(Locale.getDefault(), "%d", currentQuantity));
 
-                    double amountOrder = order.getProductPrice() * currentQuantity;
-                    order.setOrderAmount(amountOrder);
+                product.setTotalAmount(product.getProdPrice() * currentQuantity);
 
-                }
-
-                mOnDataChangeListener.onDataChanged();
             }
+
+            mOnDataChangeListener.onDataChanged();
         });
-        viewHolder.btnDecrement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int currentQuantity = Integer.parseInt(viewHolder.stepCounter.getText().toString());
+        viewHolder.btnDecrement.setOnClickListener(v -> {
+            int currentQuantity = Integer.parseInt(viewHolder.stepCounter.getText().toString());
 
-                if(currentQuantity > 0) {
-                    currentQuantity-= 1;
-                    viewHolder.stepCounter.setText(Integer.toString(currentQuantity));
+            if(currentQuantity > 0) {
+                currentQuantity-= 1;
+                viewHolder.stepCounter.setText(String.format(Locale.getDefault(), "%d", currentQuantity));
 
-                    double amountOrder = order.getProductPrice() * currentQuantity;
-                    order.setOrderAmount(amountOrder);
+                product.setTotalAmount(product.getProdPrice() * currentQuantity);
 
-                }
-
-                mOnDataChangeListener.onDataChanged();
             }
+
+            mOnDataChangeListener.onDataChanged();
         });
 
         return convertView;
     }
 
-    public double getTotalAmount(ArrayList<Order> orderAmount) {
+    public double getTotalAmount(ArrayList<Product> products) {
         double totalAmount = 0;
-        for (Order order : orderAmount){
-            totalAmount+= order.getOrderAmount();
+        for (Product product: products){
+            totalAmount+= product.getTotalAmount();
         }
         return totalAmount;
     }

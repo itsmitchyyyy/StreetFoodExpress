@@ -13,6 +13,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.administrator.streetfood.ActivityDrawer;
 import com.example.administrator.streetfood.Customer.Customer;
 import com.example.administrator.streetfood.Vendor.Vendor;
+import com.example.administrator.streetfood.VendorActivityDrawer;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,6 +38,7 @@ public class Server {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("id", Integer.toString(users.getId()));
         editor.putString("name", users.getFirstname().concat(users.getLastname()));
+        editor.putString("type", users.getType());
         editor.apply();
     }
 
@@ -57,7 +59,11 @@ public class Server {
                     user.setId(Integer.parseInt(jsonObject.getString("id")));
 
                     setSession(user, mContext);
-                    mContext.startActivity(new Intent(mContext, ActivityDrawer.class));
+                    if (user.getType().equals("Customer")) {
+                        mContext.startActivity(new Intent(mContext, ActivityDrawer.class));
+                    } else {
+                        mContext.startActivity(new Intent(mContext, VendorActivityDrawer.class));
+                    }
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -93,11 +99,12 @@ public class Server {
                             jsonObject.getString("userType"));
                     user.setId(Integer.parseInt(jsonObject.getString("id")));
 
-//                    setSession(user, mContext);
-
-                    Toast.makeText(mContext, user.getType(), Toast.LENGTH_SHORT).show();
-
-                    mContext.startActivity(new Intent(mContext, ActivityDrawer.class));
+                    setSession(user, mContext);
+                    if (user.getType().equals("Customer")) {
+                        mContext.startActivity(new Intent(mContext, ActivityDrawer.class));
+                    } else {
+                        mContext.startActivity(new Intent(mContext, VendorActivityDrawer.class));
+                    }
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -105,7 +112,7 @@ public class Server {
 
             customProgressDialog.hideProgress();
         }, error -> {
-            Toast.makeText(mContext, "An error ofccured", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "An error occurred", Toast.LENGTH_SHORT).show();
             customProgressDialog.hideProgress();
         }) {
             @Override

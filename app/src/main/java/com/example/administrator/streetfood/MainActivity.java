@@ -5,20 +5,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.administrator.streetfood.Customer.Customer;
-import com.example.administrator.streetfood.Customer.CustomerServer;
 import com.example.administrator.streetfood.Shared.DBConfig;
 import com.example.administrator.streetfood.Shared.Server;
 import com.example.administrator.streetfood.Shared.Users;
-
-import java.util.prefs.Preferences;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,8 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button loginButton;
     NetworkJob networkJob;
     EditText editTextEmail, editTextPassword;
-    CustomerServer customerServer;
     private Server server;
+    private int backButton = 0;
 
     @SuppressLint("NewApi")
     @Override
@@ -85,5 +83,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStart() {
         startService(new Intent(this, NetworkSchedulerService.class));
         super.onStart();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backButton > 1) {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Press the back button once again", Toast.LENGTH_SHORT).show();
+            backButton++;
+            return;
+        }
+        super.onBackPressed();
     }
 }

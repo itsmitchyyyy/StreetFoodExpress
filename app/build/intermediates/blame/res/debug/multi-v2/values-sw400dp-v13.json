@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Madi\\AndroidStudioProjects\\StreetFoodExpress\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw400dp-v13\\values-sw400dp-v13.xml",
+            "outputFile": "D:\\Works\\streetfoodexpress\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw400dp-v13\\values-sw400dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\card-form-3.5.0.aar\\c4355edd307731b9b6338c51d2d29be4\\res\\values-sw400dp-v13\\values-sw400dp-v13.xml",
+                    "source": "C:\\Users\\mars\\.gradle\\caches\\transforms-1\\files-1.1\\card-form-3.5.0.aar\\fe707ef88addbc49b8b03b18c44eead5\\res\\values-sw400dp-v13\\values-sw400dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

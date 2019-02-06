@@ -2,110 +2,93 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="26"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xhdpi"
     format="10"
-    plugin-version="3.2.1"
-    timestamp="1549287866941"
-    token="2450634943287951231"
-    verifier="FULL_BUILD_REQUESTED" >
+    ir-eligibility="COMPATIBLE"
+    plugin-version="3.3.0"
+    timestamp="1549465159993"
+    token="2448593426059068979"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="12524" />
+        duration="619" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="120" />
+        duration="7" />
     <task
         name="verifier"
-        duration="27" />
+        duration="1" />
 
     <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1549287866941"
+        timestamp="1549463741953"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Madi\AndroidStudioProjects\StreetFoodExpress\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="D:\Works\streetfoodexpress\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="SYNTHETIC_CONSTRUCTOR_CHANGE"
+        timestamp="1549464933523"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1549465159993"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Works\streetfoodexpress\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

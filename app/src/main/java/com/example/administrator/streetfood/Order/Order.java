@@ -1,42 +1,19 @@
 package com.example.administrator.streetfood.Order;
 
 public class Order {
-    private int id, productId, customerId, quantity, productImage;
-    private double orderAmount, productPrice;
-    private String orderDate, orderName;
+    private int id, prodId, customerId;
+    private double orderQty, totalAmount;
+    private String orderDate, orderStatus;
 
-    public Order(int productId, int customerId, int quantity, int productImage, double productPrice, String orderDate, String orderName) {
-        this.productId = productId;
+    public Order() {}
+
+    public Order(int prodId, int customerId, double orderQty, double totalAmount, String orderDate, String orderStatus) {
+        this.prodId = prodId;
         this.customerId = customerId;
-        this.quantity = quantity;
-        this.productImage = productImage;
-        this.productPrice = productPrice;
+        this.orderQty = orderQty;
+        this.totalAmount = totalAmount;
         this.orderDate = orderDate;
-        this.orderName = orderName;
-    }
-
-    public int getProductImage() {
-        return productImage;
-    }
-
-    public void setProductImage(int productImage) {
-        this.productImage = productImage;
-    }
-
-    public double getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
-    }
-
-    public String getOrderName() {
-        return orderName;
-    }
-
-    public void setOrderName(String orderName) {
-        this.orderName = orderName;
+        this.orderStatus = orderStatus;
     }
 
     public int getId() {
@@ -47,12 +24,12 @@ public class Order {
         this.id = id;
     }
 
-    public int getProductId() {
-        return productId;
+    public int getProdId() {
+        return prodId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
     }
 
     public int getCustomerId() {
@@ -63,20 +40,20 @@ public class Order {
         this.customerId = customerId;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public double getOrderQty() {
+        return orderQty;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setOrderQty(double orderQty) {
+        this.orderQty = orderQty;
     }
 
-    public double getOrderAmount() {
-        return orderAmount;
+    public double getTotalAmount() {
+        return totalAmount;
     }
 
-    public void setOrderAmount(double orderAmount) {
-        this.orderAmount = orderAmount;
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
     public String getOrderDate() {
@@ -85,5 +62,13 @@ public class Order {
 
     public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
+    }
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
     }
 }

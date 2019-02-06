@@ -35,7 +35,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private int currentStep = 1;
     private String gender;
     private String userType;
-    CustomerServer customerServer;
     CustomProgressDialog customProgressDialog;
     private String url;
     private Server server;
@@ -45,7 +44,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration);
 
-//        customerServer = new CustomerServer(this);
         server = new Server(this);
         customProgressDialog = new CustomProgressDialog().getInstance();
 
@@ -130,23 +128,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         final String conPassword = confirmPassword.getText().toString();
 
         if(conPassword.equals(pass)) {
-            if (userType.equals("Customer")) {
-                url = DBConfig.ServerURL + "customer/insert.php";
-            } else {
-                url = DBConfig.ServerURL + "vendor/insert.php";
-            }
+            url = DBConfig.ServerURL + "user/insert.php";
 
             Users users = new Users(email, pass, gender, bday, frstName, lstName, userType);
             server.sendRequest(url, users);
-//            if(userType.equals("Customer")){
-//                String url = "http://192.168.0.10/streetfood/customer/insert.php";
-//                Customer customer = new Customer(email, pass, gender, bday, frstName, lstName);
-//                customerServer.sendRequest(url, customer);
-//            } else {
-//                String url = "http://192.168.0.10/streetfood/vendor/insert.php";
-//                Vendor vendor = new Vendor(email, pass, gender, bday, frstName, lstName);
-//                /* TODO: VENDOR SERVER */
-//            }
+
         } else {
             Toast.makeText(this, "Password and Confirm password does not match", Toast.LENGTH_LONG).show();
         }

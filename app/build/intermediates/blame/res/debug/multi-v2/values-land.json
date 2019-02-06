@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Madi\\AndroidStudioProjects\\StreetFoodExpress\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "D:\\Works\\streetfoodexpress\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\58e0e7d959df6df5f6fa4e5f5da75b39\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\mars\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\36611830f4d8108dccdd6174e1d43660\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "13",
+                        "startColumns": "4",
+                        "startOffsets": "804",
+                        "endLines": "16",
+                        "endColumns": "10",
+                        "endOffsets": "971"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mars\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\ede3e1dc064c10e9f92568a499f70be7\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +33,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\drop-in-3.7.1.aar\\d62fc75748b3b629dd5b36a54cd12c2d\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\mars\\.gradle\\caches\\transforms-1\\files-1.1\\drop-in-3.7.1.aar\\76f07fcf0d5b12cf25abdec84e948216\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
@@ -31,7 +50,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\card-form-3.5.0.aar\\c4355edd307731b9b6338c51d2d29be4\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\mars\\.gradle\\caches\\transforms-1\\files-1.1\\card-form-3.5.0.aar\\fe707ef88addbc49b8b03b18c44eead5\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -45,25 +64,6 @@
                         "startOffsets": "411,475,548",
                         "endColumns": "63,72,72",
                         "endOffsets": "470,543,616"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Madi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\51bb4d89793f17d4f42dbd57ca120618\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "10",
-                        "endOffsets": "222"
-                    },
-                    "to": {
-                        "startLines": "13",
-                        "startColumns": "4",
-                        "startOffsets": "804",
-                        "endLines": "16",
-                        "endColumns": "10",
-                        "endOffsets": "971"
                     }
                 }
             ]

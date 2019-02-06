@@ -23,7 +23,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.administrator.streetfood.AppStartActivity" >
+        <activity android:name="com.example.administrator.streetfood.VendorActivityDrawer" />
+        <activity
+            android:name="com.example.administrator.streetfood.AppStartActivity"
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
