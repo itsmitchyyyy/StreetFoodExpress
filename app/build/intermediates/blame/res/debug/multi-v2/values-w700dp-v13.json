@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Works\\streetfoodexpress\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w700dp-v13\\values-w700dp-v13.xml",
+            "outputFile": "/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w700dp-v13/values-w700dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mars\\.gradle\\caches\\transforms-1\\files-1.1\\drop-in-3.7.1.aar\\76f07fcf0d5b12cf25abdec84e948216\\res\\values-w700dp-v13\\values-w700dp-v13.xml",
+                    "source": "/home/anonymous/.gradle/caches/transforms-1/files-1.1/drop-in-3.7.1.aar/b3d9178a1f8ff49b2625e49c25a77e1d/res/values-w700dp-v13/values-w700dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

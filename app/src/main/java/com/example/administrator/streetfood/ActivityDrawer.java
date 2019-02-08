@@ -84,16 +84,16 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
         if (mDrawLayout.isDrawerOpen(GravityCompat.START)){
             mDrawLayout.closeDrawer(GravityCompat.START);
         }
-        else if(backButton > 1) {
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Press the back button once again", Toast.LENGTH_SHORT).show();
-            backButton++;
-            return;
-        }
+//        else if(backButton > 1) {
+//            Intent intent = new Intent(Intent.ACTION_MAIN);
+//            intent.addCategory(Intent.CATEGORY_HOME);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//        } else {
+//            Toast.makeText(this, "Press the back button once again", Toast.LENGTH_SHORT).show();
+//            backButton++;
+//            return;
+//        }
         super.onBackPressed();
     }
 }

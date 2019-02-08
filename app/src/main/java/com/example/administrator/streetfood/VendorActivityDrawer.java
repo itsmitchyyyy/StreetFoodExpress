@@ -63,7 +63,7 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
         mDrawLayout.closeDrawers();
         switch (id) {
             case R.id.nav_order:
-                getSupportFragmentManager().beginTransaction().replace(R.id.contentFrame, new OrderFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new VendorOrderListFragment()).commit();
                 break;
             case R.id.nav_logout:
                 SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
@@ -83,16 +83,17 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
     public void onBackPressed() {
         if (mDrawLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawLayout.closeDrawer(GravityCompat.START);
-        } else if (backButton > 1) {
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Press the back button once again", Toast.LENGTH_SHORT).show();
-            backButton++;
-            return;
         }
-        super.onBackPressed();
+//        else if (backButton > 1) {
+//            Intent intent = new Intent(Intent.ACTION_MAIN);
+//            intent.addCategory(Intent.CATEGORY_HOME);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//        } else {
+//            Toast.makeText(this, "Press the back button once again", Toast.LENGTH_SHORT).show();
+//            backButton++;
+//            return;
+//        }
+//        super.onBackPressed();
     }
 }

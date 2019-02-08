@@ -1,4 +1,4 @@
-#Wed Feb 06 06:32:54 PST 2019
-base.0=D\:\\Works\\streetfoodexpress\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+#Fri Feb 08 11:42:44 PHT 2019
+base.0=/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/transforms/dexMerger/debug/1
 path.0=classes.dex
 renamed.0=classes.dex

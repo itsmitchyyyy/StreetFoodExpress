@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.paypal.android.sdk:paypal-one-touch:2.18.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/paypal-one-touch-2.18.1.aar/4d8b913e2a2fabb819277b7a99924821/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/paypal-one-touch-2.18.1.aar/4d8b913e2a2fabb819277b7a99924821/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/paypal-one-touch-2.18.1.aar/e86015634117341241d0c72953eb1149/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/paypal-one-touch-2.18.1.aar/e86015634117341241d0c72953eb1149/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

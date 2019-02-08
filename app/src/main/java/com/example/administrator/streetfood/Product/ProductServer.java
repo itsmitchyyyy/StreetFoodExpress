@@ -27,6 +27,7 @@ public class ProductServer {
     public interface VolleyCallBack {
         void onSuccess(String result);
         void onProductQuery(List<Product> list);
+        void onGetProduct(Product product);
     }
 
     public ProductServer() {
@@ -67,4 +68,32 @@ public class ProductServer {
         });
         queue.add(request);
     }
+
+    public void getProduct(int id, final VolleyCallBack volleyCallBack){
+        customProgressDialog.showProgress(context);
+        String url = DBConfig.ServerURL + "product/get.php?id=" + id;
+        RequestQueue queue = Volley.newRequestQueue(context);
+        StringRequest request = new StringRequest(Request.Method.GET, url, response -> {
+            try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    Product product = new Product();
+                    product.setId(Integer.parseInt(jsonObject.getString("id")));
+                    product.setSupId(Integer.parseInt(jsonObject.getString("supId")));
+                    product.setProdName(jsonObject.getString("prodName"));
+                    product.setProdImage(jsonObject.getString("prodImage"));
+                    product.setProdDesc(jsonObject.getString("prodDesc"));
+                    product.setProdQty(Double.parseDouble(jsonObject.getString("prodQty")));
+                    product.setProdPrice(Double.parseDouble(jsonObject.getString("prodPrice")));
+                    volleyCallBack.onGetProduct(product);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            customProgressDialog.hideProgress();
+        }, error -> {
+            Toast.makeText(context, "An error occured while connecting to the server", Toast.LENGTH_SHORT).show();
+            customProgressDialog.hideProgress();
+        });
+        queue.add(request);
+    }
+
 }

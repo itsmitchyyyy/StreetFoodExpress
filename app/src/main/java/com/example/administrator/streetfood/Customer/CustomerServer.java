@@ -12,12 +12,19 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.administrator.streetfood.ActivityDrawer;
+import com.example.administrator.streetfood.Order.Order;
 import com.example.administrator.streetfood.Shared.CustomProgressDialog;
+import com.example.administrator.streetfood.Shared.DBConfig;
+import com.example.administrator.streetfood.Shared.Server;
+import com.example.administrator.streetfood.Shared.Session;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CustomerServer {
@@ -25,6 +32,10 @@ public class CustomerServer {
     public static final String accountPreferences = "accountPref";
     private Context mContext;
     CustomProgressDialog customProgressDialog = new CustomProgressDialog().getInstance();
+
+    public interface VolleyCallBack {
+        void onGetCustomer(Customer customer);
+    }
 
     public CustomerServer(){}
 
@@ -119,6 +130,26 @@ public class CustomerServer {
                 return map;
             }
         };
+        queue.add(request);
+    }
+
+    public void getCustomerOrder(int id, VolleyCallBack volleyCallBack) {
+        String url = DBConfig.ServerURL + "user/get.php?id=" + id;
+        RequestQueue queue = Volley.newRequestQueue(mContext);
+        StringRequest request = new StringRequest(Request.Method.GET, url, response -> {
+            try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    Customer customer = new Customer(jsonObject.getString("email"), jsonObject.getString("password"),
+                            jsonObject.getString("gender"), jsonObject.getString("birthdate"),
+                            jsonObject.getString("firstName"), jsonObject.getString("lastName"));
+                    customer.setId(Integer.parseInt(jsonObject.getString("id")));
+                volleyCallBack.onGetCustomer(customer);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }, error -> {
+            Toast.makeText(mContext, "An error occured while connecting to server", Toast.LENGTH_SHORT).show();
+        });
         queue.add(request);
     }
 }

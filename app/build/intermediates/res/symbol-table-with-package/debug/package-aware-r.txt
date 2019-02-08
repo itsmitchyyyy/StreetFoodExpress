@@ -1331,6 +1331,8 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
+id imageView5
 id info
 id invisible
 id italic
@@ -1341,6 +1343,7 @@ id left
 id line1
 id line3
 id listMode
+id listView
 id listView1
 id list_item
 id masked
@@ -1428,6 +1431,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id swipeToRefresh
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1446,7 +1450,11 @@ id textView14
 id textView15
 id textView16
 id textView17
+id textView18
 id textView2
+id textView20
+id textView21
+id textView22
 id textView3
 id textView4
 id textView5
@@ -1571,6 +1579,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_vendor_order_list
+layout fragment_vendor_take_order
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1596,6 +1605,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout take_order
 layout toolbar
 layout vendor_order
 menu bt_card_io
