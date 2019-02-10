@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
+import com.example.administrator.streetfood.Shared.DBConfig;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -62,7 +64,13 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-//        viewHolder.orderImage.setImageResource(Integer.parseInt(product.getProdImage()));
+        Picasso.get()
+                .load(DBConfig.ServerURL + product.getProdImage())
+                .resize(100, 100)
+                .centerCrop()
+                .rotate(90)
+                .placeholder(R.mipmap.ic_launcher_round)
+                .into(viewHolder.orderImage);
         viewHolder.orderName.setText(Objects.requireNonNull(product).getProdName());
         viewHolder.orderPrice.setText(String.format(Locale.getDefault(),"%.2f", product.getProdPrice()));
 

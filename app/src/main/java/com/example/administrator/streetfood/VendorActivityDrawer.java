@@ -12,9 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.streetfood.Order.OrderFragment;
+import com.example.administrator.streetfood.Shared.Session;
+import com.example.administrator.streetfood.Vendor.AddProductFragment;
 import com.example.administrator.streetfood.Vendor.VendorOrderListFragment;
 
 public class VendorActivityDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -22,15 +26,22 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
     private DrawerLayout mDrawLayout;
     private NavigationView navigationView;
     private int backButton = 0;
+    private TextView navHeaderText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vendor_drawer);
 
+        Session session = new Session(getApplicationContext(), "accountPref");
+
         mDrawLayout = findViewById(R.id.vendor_nav_drawer);
 
         navigationView = findViewById(R.id.vendorNavView);
+        View navHeader = navigationView.inflateHeaderView(R.layout.nav_header_layout);
+        navHeaderText = navHeader.findViewById(R.id.navHeaderText);
+
+        navHeaderText.setText(session.getName());
 
         Toolbar toolbar = findViewById(R.id.nav_toolbar);
         setSupportActionBar(toolbar);
@@ -64,6 +75,9 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
         switch (id) {
             case R.id.nav_order:
                 getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new VendorOrderListFragment()).commit();
+                break;
+            case R.id.nav_product:
+                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new AddProductFragment()).commit();
                 break;
             case R.id.nav_logout:
                 SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);

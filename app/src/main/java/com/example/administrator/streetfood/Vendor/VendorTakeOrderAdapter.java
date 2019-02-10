@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.streetfood.Order.Order;
+import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.Product.ProductServer;
 import com.example.administrator.streetfood.R;
 
@@ -16,7 +17,9 @@ import java.util.List;
 
 public class VendorTakeOrderAdapter extends ArrayAdapter<Order> {
 
-    public VendorTakeOrderAdapter(Context context,  List<Order> orderList) {
+    private double totalAmount;
+
+    public VendorTakeOrderAdapter(Context context, List<Order> orderList) {
         super(context, 0, orderList);
     }
 
@@ -42,10 +45,34 @@ public class VendorTakeOrderAdapter extends ArrayAdapter<Order> {
         }
 
         assert order != null;
-        viewHolder.orderQuantity.setText(Double.toString(order.getOrderQty()));
-        viewHolder.totalAmount.setText(Double.toString(order.getTotalAmount()));
+        productServer.getProduct(order.getProdId(), new ProductServer.VolleyCallBack() {
+            @Override
+            public void onSuccess(String result) {
+
+            }
+
+            @Override
+            public void onProductQuery(List<Product> list) {
+
+            }
+
+            @Override
+            public void onGetProduct(Product product) {
+                viewHolder.productName.setText(product.getProdName());
+                viewHolder.orderQuantity.setText(Double.toString(order.getOrderQty()));
+                viewHolder.totalAmount.setText(Double.toString(order.getTotalAmount()));
+            }
+        });
+
 
         return convertView;
+    }
+
+    public double getTotalAmount(List<Order> orders) {
+        for (Order order: orders) {
+           totalAmount += order.getTotalAmount();
+        }
+        return totalAmount;
     }
 
     static class ViewHolder {

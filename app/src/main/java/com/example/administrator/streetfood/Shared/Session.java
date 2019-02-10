@@ -20,4 +20,8 @@ public class Session {
     public int getId() {
        return Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("id", null)));
     }
+
+    public String getName() {
+        return sharedPreferences.getString("name", null);
+    }
 }

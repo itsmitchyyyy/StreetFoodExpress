@@ -16,6 +16,7 @@ MERGED from [com.android.support:appcompat-v7:28.0.0] /home/anonymous/.gradle/ca
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/anonymous/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fa97172e2abcd7689429d780ed1388e4/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-v4:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/69dfd6d8bf0a217f10cd584cb11ad723/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.volley:volley:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/718a05e57923e4d8f84a9c9441f5d054/AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:2:1-14:12
 MERGED from [com.android.support:support-fragment:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/735345016fbe36410bfb686380e82577/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/8bd34d6499f1e1e35caf27d099492635/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/9f7ea2698a752b426dd6e5da734d351b/AndroidManifest.xml:17:1-22:12
@@ -41,6 +42,7 @@ MERGED from [com.android.support:support-compat:28.0.0] /home/anonymous/.gradle/
 MERGED from [com.android.support:versionedparcelable:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c24bf31b989a76f038c68e1f6176f93f/AndroidManifest.xml:17:1-25:12
 MERGED from [com.android.support:cursoradapter:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/2b6687e1490b2f893c1e85d3595c29c3/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/d62e2a6617bcc814520399fe32fb6f5d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/b579424c5acb64140e63ca4facbba308/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/51e5803a219de269fbbf3b49cd5e889d/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:documentfile:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/09ebcbd8372719fa97c04d3282359d38/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/ed1df74c4e6dd518fb668d8c2f63272a/AndroidManifest.xml:17:1-22:12
@@ -107,6 +109,8 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/anony
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/anonymous/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fa97172e2abcd7689429d780ed1388e4/AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/718a05e57923e4d8f84a9c9441f5d054/AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/718a05e57923e4d8f84a9c9441f5d054/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:7:5-12:19
 MERGED from [com.braintreepayments.api:braintree:2.18.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/7584f5e252a58112e3fcfacab3e4a03c/AndroidManifest.xml:14:5-24:19
 MERGED from [com.braintreepayments.api:braintree:2.18.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/7584f5e252a58112e3fcfacab3e4a03c/AndroidManifest.xml:14:5-24:19
 MERGED from [com.android.support:support-compat:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/ae6d758744b50b1a578cef148601630b/AndroidManifest.xml:22:5-94
@@ -211,6 +215,8 @@ MERGED from [com.android.support:support-v4:28.0.0] /home/anonymous/.gradle/cach
 MERGED from [com.android.support:support-v4:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/69dfd6d8bf0a217f10cd584cb11ad723/AndroidManifest.xml:20:5-44
 MERGED from [com.android.volley:volley:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/718a05e57923e4d8f84a9c9441f5d054/AndroidManifest.xml:7:5-43
 MERGED from [com.android.volley:volley:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/718a05e57923e4d8f84a9c9441f5d054/AndroidManifest.xml:7:5-43
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/735345016fbe36410bfb686380e82577/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/735345016fbe36410bfb686380e82577/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/8bd34d6499f1e1e35caf27d099492635/AndroidManifest.xml:20:5-44
@@ -261,6 +267,8 @@ MERGED from [com.android.support:cursoradapter:28.0.0] /home/anonymous/.gradle/c
 MERGED from [com.android.support:cursoradapter:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/2b6687e1490b2f893c1e85d3595c29c3/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/d62e2a6617bcc814520399fe32fb6f5d/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/d62e2a6617bcc814520399fe32fb6f5d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/b579424c5acb64140e63ca4facbba308/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/b579424c5acb64140e63ca4facbba308/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/51e5803a219de269fbbf3b49cd5e889d/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/51e5803a219de269fbbf3b49cd5e889d/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:documentfile:28.0.0] /home/anonymous/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/09ebcbd8372719fa97c04d3282359d38/AndroidManifest.xml:20:5-44
@@ -319,6 +327,14 @@ ADDED from [com.braintreepayments.api:drop-in:3.7.1] /home/anonymous/.gradle/cac
 		ADDED from [com.braintreepayments.api:drop-in:3.7.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/drop-in-3.7.1.aar/b3d9178a1f8ff49b2625e49c25a77e1d/AndroidManifest.xml:29:13-67
 	android:name
 		ADDED from [com.braintreepayments.api:drop-in:3.7.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/drop-in-3.7.1.aar/b3d9178a1f8ff49b2625e49c25a77e1d/AndroidManifest.xml:28:13-81
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/anonymous/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/7732c930ade3d7f38143783b57066a5f/AndroidManifest.xml:9:13-64
 activity#com.braintreepayments.api.AndroidPayActivity
 ADDED from [com.braintreepayments.api:braintree:2.18.1] /home/anonymous/.gradle/caches/transforms-1/files-1.1/braintree-2.18.1.aar/7584f5e252a58112e3fcfacab3e4a03c/AndroidManifest.xml:15:9-17:62
 	android:theme

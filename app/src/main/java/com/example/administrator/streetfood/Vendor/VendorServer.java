@@ -70,10 +70,10 @@ public class VendorServer {
     }
 
 
-    void viewCustomerOrder(int id, final VolleyCallBack volleyCallBack){
+    void viewCustomerOrder(String queryString, final VolleyCallBack volleyCallBack){
         List<Order> list = new ArrayList<>();
         customProgressDialog.showProgress(context);
-        String url = DBConfig.ServerURL + "order/customer/get.php?id=" + id;
+        String url = DBConfig.ServerURL + "order/customer/get.php?" + queryString;
         RequestQueue queue = Volley.newRequestQueue(context);
         StringRequest request = new StringRequest(Request.Method.GET, url, response -> {
             try {

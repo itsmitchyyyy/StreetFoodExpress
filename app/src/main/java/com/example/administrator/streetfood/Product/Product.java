@@ -9,14 +9,13 @@ public class Product {
     public Product() {
     }
 
-    public Product(int supId, int categoryId, String prodName, String prodDesc, double prodQty, double prodPrice, double totalAmount, String prodImage) {
+    public Product(int supId, int categoryId, String prodName, String prodDesc, double prodQty, double prodPrice, String prodImage) {
         this.supId = supId;
         this.categoryId = categoryId;
         this.prodName = prodName;
         this.prodDesc = prodDesc;
         this.prodQty = prodQty;
         this.prodPrice = prodPrice;
-        this.totalAmount = totalAmount;
         this.prodImage = prodImage;
     }
 

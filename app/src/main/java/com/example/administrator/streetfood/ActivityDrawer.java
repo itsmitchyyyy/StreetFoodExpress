@@ -12,15 +12,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.streetfood.Order.OrderFragment;
+import com.example.administrator.streetfood.Shared.Session;
 
 public class ActivityDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawLayout;
     private NavigationView navigationView;
     private int backButton = 0;
+    private TextView navHeaderText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +33,13 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
 
         mDrawLayout = findViewById(R.id.nav_drawer);
 
+        Session session = new Session(getApplicationContext(), "accountPref");
+
         navigationView = findViewById(R.id.navView);
+        View navHeader = navigationView.inflateHeaderView(R.layout.nav_header_layout);
+        navHeaderText = navHeader.findViewById(R.id.navHeaderText);
+
+        navHeaderText.setText(session.getName());
 
         Toolbar toolbar = findViewById(R.id.nav_toolbar);
         setSupportActionBar(toolbar);

@@ -2,73 +2,38 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="26"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.3.1"
-    timestamp="1549599110195"
+    timestamp="1549785813418"
     token="4176684862042158949"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="728" />
+        duration="870" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="50" />
+        duration="104" />
     <task
         name="verifier"
-        duration="13" />
+        duration="55" />
 
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
     <artifact
         location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1549599110195"
+        timestamp="1549785614604"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -78,9 +43,6 @@
             type="SPLIT" />
         <artifact
             location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
@@ -101,11 +63,23 @@
             location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
+            location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1549785813418"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

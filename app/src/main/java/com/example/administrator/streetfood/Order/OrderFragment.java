@@ -75,6 +75,11 @@ public class OrderFragment extends Fragment {
                     }
                 });
             }
+
+            @Override
+            public void onGetProduct(Product product) {
+
+            }
         });
 
         payButton.setOnClickListener(v -> {
