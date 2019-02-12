@@ -7,18 +7,7 @@
     android:orientation="vertical"
     tools:context=".Vendor.AddProductFragment" >
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Add Product"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
-
-   <ScrollView
+    <ScrollView
        android:layout_width="match_parent"
        android:layout_height="match_parent">
 

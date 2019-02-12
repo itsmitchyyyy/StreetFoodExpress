@@ -77,7 +77,8 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
                 getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new VendorOrderListFragment()).commit();
                 break;
             case R.id.nav_product:
-                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new AddProductFragment()).commit();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new AddProductFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new ProductTabFragment()).commit();
                 break;
             case R.id.nav_logout:
                 SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
