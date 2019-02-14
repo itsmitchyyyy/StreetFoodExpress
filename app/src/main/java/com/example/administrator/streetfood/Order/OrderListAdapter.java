@@ -15,9 +15,13 @@ import android.widget.TextView;
 import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.DBConfig;
+import com.example.administrator.streetfood.Shared.Server;
+import com.example.administrator.streetfood.Shared.Session;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -32,6 +36,8 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
     public ArrayList<Order> list;
     OnDataChangeListener mOnDataChangeListener;
     int[] currentQuantity;
+    List<HashMap<String, Integer>> selectedProduct = new ArrayList<>();
+    Session session;
 
     static class ViewHolder {
         ImageView orderImage;
@@ -44,6 +50,7 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
     public OrderListAdapter(Context context, ArrayList<Product> resource) {
         super(context, 0, resource);
         currentQuantity = new int[resource.size()];
+        session = new Session(context, Server.accountPreferences);
     }
 
     public void setOnDataChangeListener(OnDataChangeListener onDataChangeListener) {
@@ -92,8 +99,8 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
                     if (hasFocus) editingPosition = position;
                 });
                 viewHolder.stepCounter.addTextChangedListener(watcher);
-
                 product.setTotalAmount(product.getProdPrice() * currentQuantity[position]);
+                selectedProducts(product, position, currentQuantity[position]);
 
             }
 
@@ -112,8 +119,8 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
                     if (hasFocus) editingPosition = position;
                 });
                 viewHolder.stepCounter.addTextChangedListener(watcher);
-
                 product.setTotalAmount(product.getProdPrice() * currentQuantity[position]);
+                unselectedProduct(position);
 
             }
 
@@ -149,11 +156,46 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
         return position;
     }
 
-    public double getTotalAmount(ArrayList<Product> products) {
+    double getTotalAmount(ArrayList<Product> products) {
         double totalAmount = 0;
         for (Product product: products){
             totalAmount+= product.getTotalAmount();
         }
         return totalAmount;
+    }
+
+    private void selectedProducts(Product product, int position, int quantity) {
+        HashMap<String, Integer> map = new HashMap<>();
+        int id = session.getId();
+        map.put("prodId", product.getId());
+        map.put("customerId", id);
+        map.put("position", position);
+        map.put("orderQty", quantity);
+        map.put("totalAmount", (int) product.getTotalAmount());
+        for (HashMap<String, Integer> s: selectedProduct) {
+            if (s.get("position").equals(position)) {
+                s.put("customerId", id);
+                s.put("orderQty", quantity);
+                s.put("totalAmount", (int) product.getTotalAmount());
+                return;
+            }
+        }
+        selectedProduct.add(map);
+    }
+
+    private void unselectedProduct(int position) {
+        if (selectedProduct.size() > 0) {
+            for (int i = 0; i < selectedProduct.size(); i++) {
+               if ((Objects.requireNonNull(selectedProduct.get(i).get("orderQty")).equals(1))
+               && Objects.requireNonNull(selectedProduct.get(i).get("position")).equals(position)) {
+                   selectedProduct.remove(i);
+                   return;
+               }
+            }
+        }
+    }
+
+     List<HashMap<String, Integer>> getSelectedProducts() {
+        return selectedProduct;
     }
 }
