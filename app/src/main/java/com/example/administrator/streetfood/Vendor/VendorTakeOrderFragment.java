@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.streetfood.Order.Order;
+import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.Session;
 
@@ -72,12 +73,20 @@ public class VendorTakeOrderFragment extends Fragment {
 
     public void customerOrders() {
         String queryString = "customerId="+customerId+"&supId="+session.getId();
-        vendorServer.viewCustomerOrder(queryString, list -> {
-            ordersList.addAll(list);
-            takeOrderAdapter = new VendorTakeOrderAdapter(getContext(), ordersList);
-            getTotalAmount = takeOrderAdapter.getTotalAmount(ordersList);
-            totalAmount.setText(Double.toString(getTotalAmount));
-            listView.setAdapter(takeOrderAdapter);
+        vendorServer.viewCustomerOrder(queryString, new VendorServer.VolleyCallBack() {
+            @Override
+            public void onOrdersQuery(List<Order> list) {
+                ordersList.addAll(list);
+                takeOrderAdapter = new VendorTakeOrderAdapter(getContext(), ordersList);
+                getTotalAmount = takeOrderAdapter.getTotalAmount(ordersList);
+                totalAmount.setText(Double.toString(getTotalAmount));
+                listView.setAdapter(takeOrderAdapter);
+            }
+
+            @Override
+            public void onVendorProductQuery(List<Product> list) {
+
+            }
         });
     }
 

@@ -6,12 +6,12 @@
     android:background="@color/customColor"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:orientation="vertical">-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,22 +22,24 @@
         <ListView
             android:id="@+id/listView1"
             android:layout_width="match_parent"
-            android:layout_height="252dp"
+            android:layout_height="500dp"
             android:background="@android:color/background_light"
             android:scrollbars="vertical" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@android:color/background_light"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:gravity="bottom"
+            android:padding="10dp"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:gravity="bottom"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
@@ -62,8 +64,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:gravity="bottom"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <Button

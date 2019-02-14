@@ -1,6 +1,8 @@
 package com.example.administrator.streetfood.Order;
 
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,12 +23,15 @@ import java.util.Objects;
 
 public class OrderListAdapter extends ArrayAdapter<Product> {
 
+    private int editingPosition;
+
     public interface OnDataChangeListener {
         void onDataChanged();
     }
 
     public ArrayList<Order> list;
     OnDataChangeListener mOnDataChangeListener;
+    int[] currentQuantity;
 
     static class ViewHolder {
         ImageView orderImage;
@@ -38,6 +43,7 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
 
     public OrderListAdapter(Context context, ArrayList<Product> resource) {
         super(context, 0, resource);
+        currentQuantity = new int[resource.size()];
     }
 
     public void setOnDataChangeListener(OnDataChangeListener onDataChangeListener) {
@@ -48,7 +54,7 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
     public View getView(int position, View convertView, ViewGroup parent) {
         final Product product = getItem(position);
 
-        final ViewHolder viewHolder;
+        ViewHolder viewHolder;
         if(convertView == null) {
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
@@ -75,26 +81,39 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
         viewHolder.orderPrice.setText(String.format(Locale.getDefault(),"%.2f", product.getProdPrice()));
 
         viewHolder.btnIncrement.setOnClickListener(v -> {
-            int currentQuantity = Integer.parseInt(viewHolder.stepCounter.getText().toString());
+            currentQuantity[position] = Integer.parseInt(viewHolder.stepCounter.getText().toString());
 
-            if(currentQuantity <  100) {
-                currentQuantity+= 1;
-                viewHolder.stepCounter.setText(String.format(Locale.getDefault(), "%d", currentQuantity));
+            if(currentQuantity[position] <  100) {
+                currentQuantity[position] += 1;
 
-                product.setTotalAmount(product.getProdPrice() * currentQuantity);
+                viewHolder.stepCounter.removeTextChangedListener(watcher);
+                viewHolder.stepCounter.setText(String.format(Locale.getDefault(), "%d", currentQuantity[position]));
+                viewHolder.stepCounter.setOnFocusChangeListener((v1, hasFocus) -> {
+                    if (hasFocus) editingPosition = position;
+                });
+                viewHolder.stepCounter.addTextChangedListener(watcher);
+
+                product.setTotalAmount(product.getProdPrice() * currentQuantity[position]);
 
             }
 
             mOnDataChangeListener.onDataChanged();
         });
+
         viewHolder.btnDecrement.setOnClickListener(v -> {
-            int currentQuantity = Integer.parseInt(viewHolder.stepCounter.getText().toString());
+            currentQuantity[position] = Integer.parseInt(viewHolder.stepCounter.getText().toString());
 
-            if(currentQuantity > 0) {
-                currentQuantity-= 1;
-                viewHolder.stepCounter.setText(String.format(Locale.getDefault(), "%d", currentQuantity));
+            if(currentQuantity[position] > 0) {
+                currentQuantity[position] -= 1;
 
-                product.setTotalAmount(product.getProdPrice() * currentQuantity);
+                viewHolder.stepCounter.removeTextChangedListener(watcher);
+                viewHolder.stepCounter.setText(String.format(Locale.getDefault(), "%d", currentQuantity[position]));
+                viewHolder.stepCounter.setOnFocusChangeListener((v1, hasFocus) -> {
+                    if (hasFocus) editingPosition = position;
+                });
+                viewHolder.stepCounter.addTextChangedListener(watcher);
+
+                product.setTotalAmount(product.getProdPrice() * currentQuantity[position]);
 
             }
 
@@ -102,6 +121,32 @@ public class OrderListAdapter extends ArrayAdapter<Product> {
         });
 
         return convertView;
+    }
+
+    private TextWatcher watcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            currentQuantity[editingPosition] = Integer.parseInt(s.toString());
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+        }
+    };
+
+    @Override
+    public int getViewTypeCount() {
+        return getCount();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
     }
 
     public double getTotalAmount(ArrayList<Product> products) {

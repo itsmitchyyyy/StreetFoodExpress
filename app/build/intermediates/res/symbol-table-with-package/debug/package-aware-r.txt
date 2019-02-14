@@ -613,10 +613,6 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
-color browser_actions_bg_grey
-color browser_actions_divider_color
-color browser_actions_text_color
-color browser_actions_title_color
 color bt_base_background
 color bt_black
 color bt_black_12
@@ -815,8 +811,6 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
-dimen browser_actions_context_menu_max_width
-dimen browser_actions_context_menu_min_padding
 dimen bt_add_payment_method_view_radius
 dimen bt_choose_existing_payment_label_padding_top
 dimen bt_choose_new_payment_label_padding_top
@@ -1164,13 +1158,6 @@ drawable paypallogo
 drawable rounded_button
 drawable rounded_button_active
 drawable streetfoodlogo
-drawable tab_selected_focused_holo
-drawable tab_selected_holo
-drawable tab_selected_pressed_holo
-drawable tab_unselected_focused_holo
-drawable tab_unselected_holo
-drawable tab_unselected_pressed_holo
-drawable tabs
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1209,11 +1196,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id browser_actions_header_text
-id browser_actions_menu_item_icon
-id browser_actions_menu_item_text
-id browser_actions_menu_items
-id browser_actions_menu_view
 id bt_add_card_view
 id bt_animated_button_loading_indicator
 id bt_animated_button_view
@@ -1265,6 +1247,8 @@ id bt_view_animator
 id button
 id button10
 id button11
+id button12
+id button13
 id button2
 id button3
 id button4
@@ -1348,6 +1332,7 @@ id imageView3
 id imageView4
 id imageView5
 id imageView6
+id imageView7
 id info
 id invisible
 id italic
@@ -1393,6 +1378,7 @@ id parent_matrix
 id paypalButton
 id percent
 id pin
+id productListView
 id progressBar
 id progressBar2
 id progress_circular
@@ -1451,6 +1437,7 @@ id stretch
 id submenuarrow
 id submit_area
 id swipeToRefresh
+id tabLayout
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1480,9 +1467,11 @@ id textView24
 id textView25
 id textView26
 id textView27
+id textView28
 id textView29
 id textView3
 id textView30
+id textView31
 id textView4
 id textView5
 id textView6
@@ -1575,8 +1564,6 @@ layout activity_order
 layout activity_payment
 layout activity_vendor_drawer
 layout app_start
-layout browser_actions_context_menu_page
-layout browser_actions_context_menu_row
 layout bt_add_card
 layout bt_add_card_activity
 layout bt_animated_button_view
@@ -1609,6 +1596,7 @@ layout design_text_input_password_icon
 layout fragment_add_product
 layout fragment_product_tab
 layout fragment_vendor_order_list
+layout fragment_vendor_product_list
 layout fragment_vendor_take_order
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1639,6 +1627,7 @@ layout support_simple_spinner_dropdown_item
 layout take_order
 layout toolbar
 layout vendor_order
+layout vendor_product_list
 menu bt_card_io
 menu nav_menu
 menu nav_vendor_menu

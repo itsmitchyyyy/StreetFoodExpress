@@ -67,12 +67,6 @@
         <activity
             android:name="com.braintreepayments.api.dropin.VaultManagerActivity"
             android:theme="@style/bt_vault_manager_activity_theme" />
-
-        <provider
-            android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.example.administrator.streetfood.com.squareup.picasso"
-            android:exported="false" />
-
         <activity
             android:name="com.braintreepayments.api.AndroidPayActivity"
             android:theme="@style/bt_transparent_activity" />
@@ -82,6 +76,10 @@
 
         <service android:name="com.braintreepayments.api.internal.AnalyticsIntentService" />
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.administrator.streetfood.com.squareup.picasso"
+            android:exported="false" />
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.example.administrator.streetfood.com.android.tools.ir.server.InstantRunContentProvider"

@@ -109,6 +109,6 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
 //            backButton++;
 //            return;
 //        }
-//        super.onBackPressed();
+        super.onBackPressed();
     }
 }

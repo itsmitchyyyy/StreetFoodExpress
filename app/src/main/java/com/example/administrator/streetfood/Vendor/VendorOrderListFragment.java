@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.administrator.streetfood.Order.Order;
+import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.CustomProgressHorizontalDialog;
 
@@ -55,10 +56,18 @@ public class VendorOrderListFragment extends Fragment {
     }
 
     public void viewOrders() {
-        vendorServer.viewOrders(list -> {
-            orderList.addAll(list);
-            orderListAdapter = new VendorListOrderAdapter(getContext(), orderList);
-            listView.setAdapter(orderListAdapter);
+        vendorServer.viewOrders(new VendorServer.VolleyCallBack() {
+            @Override
+            public void onOrdersQuery(List<Order> list) {
+                orderList.addAll(list);
+                orderListAdapter = new VendorListOrderAdapter(getContext(), orderList);
+                listView.setAdapter(orderListAdapter);
+            }
+
+            @Override
+            public void onVendorProductQuery(List<Product> list) {
+
+            }
         });
     }
 

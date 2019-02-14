@@ -2,26 +2,21 @@ package com.example.administrator.streetfood;
 
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTabHost;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TabHost;
-import android.widget.TabWidget;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.administrator.streetfood.Shared.PageSwipe;
-import com.example.administrator.streetfood.Shared.myPagerAdapter;
-import com.example.administrator.streetfood.Vendor.AddProductFragment;
+import com.example.administrator.streetfood.Shared.myViewPager;
 
-import java.util.List;
-import java.util.Vector;
+import java.util.Objects;
 
 public class ProductTabFragment extends Fragment {
+
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     public ProductTabFragment() {
     }
@@ -32,24 +27,30 @@ public class ProductTabFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_product_tab, container, false);
-        FragmentTabHost tabHost = v.findViewById(android.R.id.tabhost);
-        ViewPager viewPager = v.findViewById(R.id.viewPager);
+        tabLayout = v.findViewById(R.id.tabLayout);
+        viewPager = v.findViewById(R.id.viewPager);
 
-        List<Fragment> fragmentList = new Vector<Fragment>();
-        fragmentList.add(Fragment.instantiate(getActivity(), AddProductFragment.class.getName()));
-        fragmentList.add(Fragment.instantiate(getActivity(), AddProductFragment.class.getName()));
-        PagerAdapter adapter = new myPagerAdapter(getChildFragmentManager(), fragmentList);
+        myViewPager adapter = new myViewPager(getChildFragmentManager(), getActivity());
 
         viewPager.setAdapter(adapter);
 
-        tabHost.setup(getContext(), getChildFragmentManager(), android.R.id.tabcontent);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
 
-        tabHost.addTab(tabHost.newTabSpec("addProduct").setIndicator("Add Product", null),
-                AddProductFragment.class, null);
-        tabHost.addTab(tabHost.newTabSpec("productList").setIndicator("Product List", null),
-                AddProductFragment.class, null);
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
 
-        viewPager.setOnPageChangeListener(new PageSwipe(tabHost));
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         return v;
     }
