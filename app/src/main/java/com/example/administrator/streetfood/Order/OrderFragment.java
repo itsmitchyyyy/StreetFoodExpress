@@ -17,7 +17,9 @@ import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.Product.ProductServer;
 import com.example.administrator.streetfood.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -83,8 +85,10 @@ public class OrderFragment extends Fragment {
         });
 
         payButton.setOnClickListener(v -> {
+            List<HashMap<String, Integer>> list = orderListAdapter.getSelectedProducts();
             Intent intent = new Intent(orderView.getContext(), PaymentActivity.class);
             intent.putExtra("totalAmount", String.format(Locale.getDefault(), "%.2f",totalOrderAmount));
+            intent.putExtra("orderDetails", (Serializable) list);
             startActivity(intent);
         });
 

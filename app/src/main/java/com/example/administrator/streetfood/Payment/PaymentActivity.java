@@ -34,7 +34,7 @@ public class PaymentActivity extends AppCompatActivity implements NavigationView
         Bundle b = getIntent().getExtras();
         assert b != null;
         if(b.isEmpty()) {
-            Toast.makeText(this, b.getString("totalAmount"), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, b.getString("orderTotalAmount"), Toast.LENGTH_SHORT).show();
         }
 
         drawerLayout = findViewById(R.id.nav_drawer);
@@ -47,7 +47,9 @@ public class PaymentActivity extends AppCompatActivity implements NavigationView
         actionBar.setHomeAsUpIndicator(R.drawable.ic_nav_menu);
 
         if(savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.contentFrame, new PaymentFragment()).commit();
+            PaymentFragment paymentFragment = new PaymentFragment();
+            paymentFragment.setArguments(b);
+            getSupportFragmentManager().beginTransaction().replace(R.id.contentFrame, paymentFragment).commit();
             navigationView.setCheckedItem(R.id.nav_order);
         }
 

@@ -28,6 +28,8 @@ import com.braintreepayments.api.models.PayPalAccountNonce;
 import com.braintreepayments.api.models.PayPalRequest;
 import com.braintreepayments.api.models.PaymentMethodNonce;
 import com.braintreepayments.api.models.PostalAddress;
+import com.example.administrator.streetfood.Order.Order;
+import com.example.administrator.streetfood.Order.OrderServer;
 import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.CustomProgressDialog;
 import com.example.administrator.streetfood.Shared.DBConfig;
@@ -39,6 +41,9 @@ import com.paypal.android.sdk.data.collector.PayPalDataCollector;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 import cz.msebera.android.httpclient.Header;
@@ -50,6 +55,10 @@ public class PaymentFragment extends Fragment {
     View paymentView;
     private String clientToken;
     private BraintreeFragment braintreeFragment;
+    List<HashMap<String, Integer>> list;
+    private OrderServer orderServer;
+    Order order;
+    private String orderTotalAmount;
 
     public PaymentFragment() {
         // Required empty public constructor
@@ -61,6 +70,14 @@ public class PaymentFragment extends Fragment {
         paymentView = inflater.inflate(R.layout.activity_payment, container, false);
 
         customProgressDialog = new CustomProgressDialog().getInstance();
+
+        Bundle b = getArguments();
+        if (b.size() > 0) {
+            list = (ArrayList<HashMap<String, Integer>>)b.getSerializable("orderDetails");
+            orderTotalAmount = b.getString("orderTotalAmount");
+        }
+
+        orderServer = new OrderServer(getContext());
 
         cashOnDelivery = paymentView.findViewById(R.id.codButton);
         onlinePayment = paymentView.findViewById(R.id.paypalButton);
@@ -79,12 +96,14 @@ public class PaymentFragment extends Fragment {
         client.get(DBConfig.ServerURL + "payment/client-token.php", new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+               Log.d("asd", responseString);
                 customProgressDialog.hideProgress();
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
                 try {
+                    Log.d("asd", responseString);
                     clientToken = responseString;
                     braintreeFragment = BraintreeFragment.newInstance(getActivity(), clientToken);
                     braintreeFragment.addListener(braintreeCancelListener);
@@ -146,7 +165,7 @@ public class PaymentFragment extends Fragment {
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
         params.put("payment_method_nonce", nonce);
-        params.put("amount", "1");
+        params.put("amount", orderTotalAmount);
         client.post(DBConfig.ServerURL + "payment/payment.php", params, new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
@@ -157,8 +176,14 @@ public class PaymentFragment extends Fragment {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
-                Log.d("zxcz", responseString);
-                Toast.makeText(getContext(), "Payment Success", Toast.LENGTH_SHORT).show();
+                for (HashMap<String, Integer> map: list) {
+                    order = new Order();
+                    order.setProdId(map.get("prodId"));
+                    order.setCustomerId(map.get("customerId"));
+                    order.setOrderQty(map.get("orderQty"));
+                    order.setTotalAmount(map.get("totalAmount"));
+                    orderServer.addOrder(order);
+                }
                 customProgressDialog.hideProgress();
             }
         });

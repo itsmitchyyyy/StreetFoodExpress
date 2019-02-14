@@ -1,4 +1,4 @@
-#Thu Feb 14 13:59:28 PHT 2019
+#Fri Feb 15 02:47:22 PHT 2019
 base.0=/home/anonymous/StudioProjects/streetfoodexpress/app/build/intermediates/transforms/dexMerger/debug/5
 path.0=classes.dex
 renamed.0=classes.dex
