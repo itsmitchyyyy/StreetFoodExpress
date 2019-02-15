@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/customColor"
+    android:padding="20dp"
+    tools:context=".Customer.CustomerOrderNotificationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal|center_vertical">
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:clickable="false"
+            android:background="@drawable/rounded_button"
+            android:text="Processing" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="15dp" />
+
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:text="Shipping" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="15dp" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:text="Completed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/background_light"
+        android:gravity="end|center_vertical">
+
+        <TextView
+            android:id="@+id/orderListDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Order Date"
+            android:textSize="20dp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/orderListView"
+        android:background="@android:color/background_light"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+
+    <LinearLayout
+        android:background="@android:color/background_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/totalText"
+            android:gravity="end"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Total"
+            android:textColor="@android:color/black"
+            android:textSize="40dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/totalValue"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Total"
+            android:textColor="@android:color/black"
+            android:textSize="40dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -47,7 +47,7 @@ public class AddProductFragment extends Fragment implements View.OnClickListener
     private ImageView productImage;
     private EditText productName, quantityOnHand, productPrice, productDesc;
     private Spinner category;
-    public List<Category> catList = new ArrayList<>();
+    public  List<Category> catList = new ArrayList<>();
     private CategoryAdapter categoryArrayAdapter;
     private int catId;
     private Button btnAdd;
