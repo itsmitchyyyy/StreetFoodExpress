@@ -1253,6 +1253,7 @@ id button13
 id button14
 id button15
 id button16
+id button17
 id button2
 id button3
 id button4
@@ -1273,6 +1274,23 @@ id clip_horizontal
 id clip_vertical
 id codButton
 id collapseActionView
+id completedCustomerEmail
+id completedCustomerImage
+id completedCustomerName
+id completedListView
+id completedOrderCustomerEmail
+id completedOrderCustomerImage
+id completedOrderCustomerName
+id completedOrderListItemImageView8
+id completedOrderListItemTextView36
+id completedOrderListItemTextView37
+id completedOrderListLabel
+id completedOrderListView
+id completedOrderTextView41
+id completedOrdersLabel
+id completedTextView38
+id completedTextView39
+id completedTextView40
 id confirmPassword
 id container
 id content
@@ -1611,6 +1629,7 @@ layout bt_section_divider
 layout bt_vault_management_activity
 layout bt_vault_manager_list_item
 layout bt_vaulted_payment_method_card
+layout completed_order_list
 layout connection_checker_layout
 layout customer_order_listview_item
 layout design_bottom_navigation_item
@@ -1631,6 +1650,8 @@ layout fragment_add_product
 layout fragment_customer_notification_order
 layout fragment_customer_order_list
 layout fragment_product_tab
+layout fragment_vendor_completed_orders
+layout fragment_vendor_completed_orders_list
 layout fragment_vendor_order_list
 layout fragment_vendor_product_list
 layout fragment_vendor_shipping_order
@@ -1666,6 +1687,8 @@ layout shipping_order_list_item
 layout support_simple_spinner_dropdown_item
 layout take_order
 layout toolbar
+layout vendor_completed_order_list
+layout vendor_completed_order_list_item
 layout vendor_order
 layout vendor_product_list
 layout vendor_shipping_order_list

@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.administrator.streetfood.Vendor.VendorCompletedOrdersFragment;
 import com.example.administrator.streetfood.Vendor.VendorShippingOrderFragment;
 
 public class myOrderViewPager extends FragmentStatePagerAdapter {
@@ -25,7 +26,7 @@ public class myOrderViewPager extends FragmentStatePagerAdapter {
             case 0:
                 return new VendorShippingOrderFragment();
             case 1:
-                return new VendorShippingOrderFragment();
+                return new VendorCompletedOrdersFragment();
             default:
                 return null;
         }

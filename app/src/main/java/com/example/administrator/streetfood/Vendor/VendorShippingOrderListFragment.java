@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,6 +34,8 @@ public class VendorShippingOrderListFragment extends Fragment {
     List<Order> orderList = new ArrayList<>();
     private OrderServer orderServer;
     private VendorShippingOrderListAdapter adapter;
+    private Button buttonComplete;
+    private String uuid;
 
     public VendorShippingOrderListFragment() {
         // Required empty public constructor
@@ -48,6 +51,7 @@ public class VendorShippingOrderListFragment extends Fragment {
         customerImage = v.findViewById(R.id.customerImage);
         customerName = v.findViewById(R.id.customerName);
         customerEmail = v.findViewById(R.id.customerEmail);
+        buttonComplete = v.findViewById(R.id.button17);
 
         Bundle b = getArguments();
         customerServer = new CustomerServer(getContext());
@@ -56,6 +60,7 @@ public class VendorShippingOrderListFragment extends Fragment {
         shippingOrderListView = v.findViewById(R.id.shippingOrderListView);
 
         assert b != null;
+        uuid = b.getString("uuid");
         customerServer.getCustomerOrder(Integer.parseInt(Objects.requireNonNull(b.getString("customerId"))), customer -> {
 //            Picasso.get().load(customer.get)
             customerName.setText(customer.getFirstname().concat(" ").concat(customer.getLastname()));
@@ -66,6 +71,10 @@ public class VendorShippingOrderListFragment extends Fragment {
             orderList.addAll(list);
             adapter = new VendorShippingOrderListAdapter(getContext(), orderList);
             shippingOrderListView.setAdapter(adapter);
+        });
+
+        buttonComplete.setOnClickListener(v1 -> {
+            orderServer.updateOrder(uuid, "2");
         });
 
         return v;
