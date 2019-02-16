@@ -45,6 +45,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -176,15 +177,18 @@ public class PaymentFragment extends Fragment {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                String uuid = UUID.randomUUID().toString().replaceAll("-","").toUpperCase();
                 for (HashMap<String, Integer> map: list) {
                     order = new Order();
                     order.setProdId(map.get("prodId"));
                     order.setCustomerId(map.get("customerId"));
                     order.setOrderQty(map.get("orderQty"));
                     order.setTotalAmount(map.get("totalAmount"));
+                    order.setOrderUuid(uuid);
                     orderServer.addOrder(order);
                 }
                 customProgressDialog.hideProgress();
+                Toast.makeText(getContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
             }
         });
     }

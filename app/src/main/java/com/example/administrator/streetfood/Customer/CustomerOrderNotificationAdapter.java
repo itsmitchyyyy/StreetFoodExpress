@@ -1,6 +1,7 @@
 package com.example.administrator.streetfood.Customer;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ public class CustomerOrderNotificationAdapter extends ArrayAdapter<Order> {
 
     private ProductServer productServer;
 
-    public CustomerOrderNotificationAdapter(Context context, int resource, List<Order> list) {
+    public CustomerOrderNotificationAdapter(Context context, List<Order> list) {
         super(context, 0, list);
     }
 
@@ -31,7 +32,9 @@ public class CustomerOrderNotificationAdapter extends ArrayAdapter<Order> {
     public View getView(int position, View convertView, ViewGroup parent) {
         Order order = getItem(position);
 
-        productServer = new ProductServer();
+        Log.d("idx", String.valueOf(order.getProdId()));
+
+        productServer = new ProductServer(getContext());
 
         ViewHolder viewHolder;
         if (convertView == null) {

@@ -3,6 +3,7 @@ package com.example.administrator.streetfood.Vendor;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
@@ -19,7 +20,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class VendorServer {
 
@@ -38,11 +41,52 @@ public class VendorServer {
         this.context = context;
     }
 
-    void viewOrders(final VolleyCallBack volleyCallBack){
+    void viewShippingOrdersList(String status, VolleyCallBack volleyCallBack) {
+        List<Order> list = new ArrayList<>();
+        int id = new Session(context, Server.accountPreferences).getId();
+        customProgressDialog.showProgress(context);
+        String url = DBConfig.OrderVendorURL + "list.php";
+        RequestQueue queue = Volley.newRequestQueue(context);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            try {
+                JSONArray jsonArray = new JSONArray(response);
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    Order order = new Order();
+                    order.setId(Integer.parseInt(jsonObject.getString("id")));
+                    order.setOrderUuid(jsonObject.getString("uuid"));
+                    order.setProdId(Integer.parseInt(jsonObject.getString("prodId")));
+                    order.setCustomerId(Integer.parseInt(jsonObject.getString("customerId")));
+                    order.setTotalAmount(Double.parseDouble(jsonObject.getString("orderTotalAmount")));
+                    order.setOrderDate(jsonObject.getString("orderDate"));
+                    order.setOrderStatus(jsonObject.getString("orderStatus"));
+                    list.add(order);
+                }
+                volleyCallBack.onOrdersQuery(list);
+                customProgressDialog.hideProgress();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }, error -> {
+            Toast.makeText(context, "An error occured while connecting to server", Toast.LENGTH_SHORT).show();
+            customProgressDialog.hideProgress();
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<>();
+                map.put("orderStatus", status);
+                map.put("supId", String.valueOf(id));
+                return map;
+            }
+        };
+        queue.add(request);
+    }
+
+    void viewOrders(String status, final VolleyCallBack volleyCallBack){
         int id = new Session(context, Server.accountPreferences).getId();
         List<Order> list = new ArrayList<>();
         customProgressDialog.showProgress(context);
-        String url = DBConfig.ServerURL + "order/view.php?id=" + id;
+        String url = DBConfig.OrderVendorURL + "view.php?id=" + id + "&orderStatus=" + status;
         RequestQueue queue = Volley.newRequestQueue(context);
         StringRequest request = new StringRequest(Request.Method.GET, url, response -> {
             try {
@@ -56,6 +100,7 @@ public class VendorServer {
                     order.setOrderQty(Double.parseDouble(jsonObject.getString("orderQty")));
                     order.setTotalAmount(Double.parseDouble(jsonObject.getString("totalAmount")));
                     order.setOrderDate(jsonObject.getString("orderDate"));
+                    order.setOrderUuid(jsonObject.getString("uuid"));
                     order.setOrderStatus(jsonObject.getString("orderStatus"));
                     list.add(order);
                 }

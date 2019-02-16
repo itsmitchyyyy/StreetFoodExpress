@@ -3,7 +3,7 @@ package com.example.administrator.streetfood.Order;
 public class Order {
     private int id, prodId, customerId;
     private double orderQty, totalAmount;
-    private String orderDate, orderStatus;
+    private String orderDate, orderStatus, orderUuid;
 
     public Order() {}
 
@@ -70,5 +70,13 @@ public class Order {
 
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
+    }
+
+    public String getOrderUuid() {
+        return orderUuid;
+    }
+
+    public void setOrderUuid(String orderUuid) {
+        this.orderUuid = orderUuid;
     }
 }

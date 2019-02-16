@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.administrator.streetfood.Customer.Customer;
+import com.example.administrator.streetfood.Customer.CustomerOrderList;
 import com.example.administrator.streetfood.Order.OrderFragment;
 import com.example.administrator.streetfood.Shared.Session;
 
@@ -25,6 +27,7 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
     private NavigationView navigationView;
     private int backButton = 0;
     private TextView navHeaderText;
+    private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,7 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
 
         mDrawLayout = findViewById(R.id.nav_drawer);
 
-        Session session = new Session(getApplicationContext(), "accountPref");
+        session = new Session(getApplicationContext(), "accountPref");
 
         navigationView = findViewById(R.id.navView);
         View navHeader = navigationView.inflateHeaderView(R.layout.nav_header_layout);
@@ -73,7 +76,20 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
         mDrawLayout.closeDrawers();
         switch (id) {
             case R.id.nav_order:
-                getSupportFragmentManager().beginTransaction().replace(R.id.contentFrame, new OrderFragment()).commit();
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentFrame, new OrderFragment())
+                        .commit();
+                break;
+            case R.id.nav_order_list:
+                Bundle b = new Bundle();
+                b.putString("id", String.valueOf(session.getId()));
+                CustomerOrderList customerOrderList = new CustomerOrderList();
+                customerOrderList.setArguments(b);
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentFrame, customerOrderList)
+                        .commit();
                 break;
             case R.id.nav_logout:
                 SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);

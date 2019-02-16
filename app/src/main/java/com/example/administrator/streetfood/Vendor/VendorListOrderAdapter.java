@@ -58,7 +58,7 @@ public class VendorListOrderAdapter extends ArrayAdapter<Order> {
                 b.putInt("id", order.getCustomerId());
                 b.putString("orderDate", order.getOrderDate());
                 b.putString("name", customer.getFirstname().concat(" ").concat(customer.getLastname()));
-//                b.putString("image", customerGetImage());
+                b.putString("uuid", order.getOrderUuid());
                 VendorTakeOrderFragment vendorTakeOrderFragment = new VendorTakeOrderFragment();
                 vendorTakeOrderFragment.setArguments(b);
                 ((VendorActivityDrawer) getContext())

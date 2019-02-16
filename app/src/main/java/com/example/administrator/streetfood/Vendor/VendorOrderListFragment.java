@@ -56,7 +56,7 @@ public class VendorOrderListFragment extends Fragment {
     }
 
     public void viewOrders() {
-        vendorServer.viewOrders(new VendorServer.VolleyCallBack() {
+        vendorServer.viewOrders("0", new VendorServer.VolleyCallBack() {
             @Override
             public void onOrdersQuery(List<Order> list) {
                 orderList.addAll(list);

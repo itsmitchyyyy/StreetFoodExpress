@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.streetfood.Order.Order;
+import com.example.administrator.streetfood.Order.OrderServer;
 import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.Session;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class VendorTakeOrderFragment extends Fragment {
+public class VendorTakeOrderFragment extends Fragment implements View.OnClickListener {
 
 
     private ListView listView;
@@ -39,6 +40,8 @@ public class VendorTakeOrderFragment extends Fragment {
     private double orderAmount;
     private Session session;
     private double getTotalAmount;
+    private String orderUUID;
+    private OrderServer orderServer;
 
     public VendorTakeOrderFragment() {
         // Required empty public constructor
@@ -59,6 +62,7 @@ public class VendorTakeOrderFragment extends Fragment {
         btnConfirm = view.findViewById(R.id.button10);
 
         vendorServer = new VendorServer(getContext());
+        orderServer = new OrderServer(getContext());
 
         getFragmentArguments();
         customerOrders();
@@ -68,10 +72,13 @@ public class VendorTakeOrderFragment extends Fragment {
             swipeToRefresh.setRefreshing(false);
         });
 
+        btnConfirm.setOnClickListener(this);
+
         return view;
     }
 
     public void customerOrders() {
+        ordersList.clear();
         String queryString = "customerId="+customerId+"&supId="+session.getId();
         vendorServer.viewCustomerOrder(queryString, new VendorServer.VolleyCallBack() {
             @Override
@@ -94,8 +101,18 @@ public class VendorTakeOrderFragment extends Fragment {
         customerId = getArguments() != null ? getArguments().getInt("id") : 0;
         cName = getArguments().getString("name");
         oDate = getArguments().getString("orderDate");
+        orderUUID = getArguments().getString("uuid");
 
         customerName.setText(cName);
         orderDate.setText(oDate);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button10:
+                orderServer.updateOrder(orderUUID, "1");
+                break;
+        }
     }
 }

@@ -14,12 +14,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.administrator.streetfood.Order.OrderFragment;
 import com.example.administrator.streetfood.Shared.Session;
-import com.example.administrator.streetfood.Vendor.AddProductFragment;
 import com.example.administrator.streetfood.Vendor.VendorOrderListFragment;
+import com.example.administrator.streetfood.Vendor.VendorOrderListTabFragment;
 
 public class VendorActivityDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -79,6 +77,9 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
             case R.id.nav_product:
 //                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new AddProductFragment()).commit();
                 getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new ProductTabFragment()).commit();
+                break;
+            case R.id.nav_order_List:
+                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new VendorOrderListTabFragment()).commit();
                 break;
             case R.id.nav_logout:
                 SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);

@@ -12,6 +12,8 @@ import com.example.administrator.streetfood.Order.Order;
 import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.Product.ProductServer;
 import com.example.administrator.streetfood.R;
+import com.example.administrator.streetfood.Shared.DBConfig;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -58,6 +60,12 @@ public class VendorTakeOrderAdapter extends ArrayAdapter<Order> {
 
             @Override
             public void onGetProduct(Product product) {
+                Picasso.get()
+                        .load(DBConfig.ServerURL + product.getProdImage())
+                        .centerCrop()
+                        .fit()
+                        .placeholder(R.mipmap.ic_launcher_round)
+                        .into(viewHolder.productImage);
                 viewHolder.productName.setText(product.getProdName());
                 viewHolder.orderQuantity.setText(Double.toString(order.getOrderQty()));
                 viewHolder.totalAmount.setText(Double.toString(order.getTotalAmount()));
