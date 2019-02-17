@@ -3,11 +3,14 @@ package com.example.administrator.streetfood;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -28,6 +31,7 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
     private int backButton = 0;
     private TextView navHeaderText;
     private Session session;
+    private ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +52,27 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_nav_menu);
+        toggle = new ActionBarDrawerToggle(this, mDrawLayout, R.string.drawer_open, R.string.drawer_close) {
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+        };
+
+        mDrawLayout.setDrawerListener(toggle);
 
         if(savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.contentFrame, new OrderFragment()).commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.contentFrame, new OrderFragment())
+                    .commit();
             navigationView.setCheckedItem(R.id.nav_order);
         }
 
@@ -61,6 +82,10 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
         switch (item.getItemId()) {
 //            open the drawer when the user taps on the nav drawer button
             case android.R.id.home:
@@ -88,6 +113,7 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
                 customerOrderList.setArguments(b);
                 getSupportFragmentManager()
                         .beginTransaction()
+                        .addToBackStack(null)
                         .replace(R.id.contentFrame, customerOrderList)
                         .commit();
                 break;
@@ -121,5 +147,17 @@ public class ActivityDrawer extends AppCompatActivity implements NavigationView.
 //            return;
 //        }
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        toggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        toggle.onConfigurationChanged(newConfig);
     }
 }

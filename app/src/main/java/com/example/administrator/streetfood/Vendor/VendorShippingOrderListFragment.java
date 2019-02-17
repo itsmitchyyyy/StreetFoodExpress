@@ -15,6 +15,7 @@ import com.example.administrator.streetfood.Customer.CustomerServer;
 import com.example.administrator.streetfood.Order.Order;
 import com.example.administrator.streetfood.Order.OrderServer;
 import com.example.administrator.streetfood.R;
+import com.example.administrator.streetfood.VendorActivityDrawer;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -67,14 +68,38 @@ public class VendorShippingOrderListFragment extends Fragment {
             customerEmail.setText(customer.getEmail());
         });
 
-        orderServer.getSelectedCustomerOrders(b.getString("customerId"), list -> {
-            orderList.addAll(list);
-            adapter = new VendorShippingOrderListAdapter(getContext(), orderList);
-            shippingOrderListView.setAdapter(adapter);
+        orderServer.getSelectedCustomerOrders(b.getString("customerId"), new OrderServer.VolleyCallback() {
+            @Override
+            public void onCustomerOrderListQuery(List<Order> list) {
+                orderList.addAll(list);
+                adapter = new VendorShippingOrderListAdapter(getContext(), orderList);
+                shippingOrderListView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onUpdateStatus(boolean status) {
+
+            }
         });
 
         buttonComplete.setOnClickListener(v1 -> {
-            orderServer.updateOrder(uuid, "2");
+            orderServer.updateOrder(uuid, "2", new OrderServer.VolleyCallback() {
+                @Override
+                public void onCustomerOrderListQuery(List<Order> list) {
+
+                }
+
+                @Override
+                public void onUpdateStatus(boolean status) {
+                    if (status) {
+                        ((VendorActivityDrawer)getContext())
+                                .getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.vendorContentFrame, new VendorCompletedOrdersFragment())
+                                .commit();
+                    }
+                }
+            });
         });
 
         return v;

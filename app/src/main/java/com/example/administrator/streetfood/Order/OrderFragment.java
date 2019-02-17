@@ -16,6 +16,9 @@ import com.example.administrator.streetfood.Payment.PaymentActivity;
 import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.Product.ProductServer;
 import com.example.administrator.streetfood.R;
+import com.pusher.client.Pusher;
+import com.pusher.client.PusherOptions;
+import com.pusher.client.channel.Channel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -54,6 +57,20 @@ public class OrderFragment extends Fragment {
         totalAmount = orderView.findViewById(R.id.textView4);
         payButton = orderView.findViewById(R.id.button5);
 
+        viewAll();
+
+        payButton.setOnClickListener(v -> {
+            List<HashMap<String, Integer>> list = orderListAdapter.getSelectedProducts();
+            Intent intent = new Intent(orderView.getContext(), PaymentActivity.class);
+            intent.putExtra("totalAmount", String.format(Locale.getDefault(), "%.2f",totalOrderAmount));
+            intent.putExtra("orderDetails", (Serializable) list);
+            startActivity(intent);
+        });
+
+        return orderView;
+    }
+
+    public void viewAll() {
         productServer.viewAll(new ProductServer.VolleyCallBack() {
             @Override
             public void onSuccess(String result) {
@@ -63,7 +80,7 @@ public class OrderFragment extends Fragment {
             @Override
             public void onProductQuery(List<Product> list) {
                 productList.addAll(list);
-                orderListAdapter = new OrderListAdapter(orderView.getContext(), productList);
+                orderListAdapter = new OrderListAdapter(getContext(), productList);
                 listView.setAdapter(orderListAdapter);
 
                 orderListAdapter.setOnDataChangeListener(() -> {
@@ -83,15 +100,5 @@ public class OrderFragment extends Fragment {
 
             }
         });
-
-        payButton.setOnClickListener(v -> {
-            List<HashMap<String, Integer>> list = orderListAdapter.getSelectedProducts();
-            Intent intent = new Intent(orderView.getContext(), PaymentActivity.class);
-            intent.putExtra("totalAmount", String.format(Locale.getDefault(), "%.2f",totalOrderAmount));
-            intent.putExtra("orderDetails", (Serializable) list);
-            startActivity(intent);
-        });
-
-        return orderView;
     }
 }

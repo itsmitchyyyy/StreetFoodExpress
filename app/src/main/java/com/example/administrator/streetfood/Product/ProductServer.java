@@ -65,7 +65,39 @@ public class ProductServer {
                 map.put("prodDesc", product.getProdDesc());
                 map.put("prodQty", Double.toString(product.getProdQty()));
                 map.put("prodPrice", Double.toString(product.getProdPrice()));
-                map.put("prodImage", product.getProdImage());
+                if (product.getProdImage() != null) {
+                    map.put("prodImage", product.getProdImage());
+                }
+                return map;
+            }
+        };
+        queue.add(request);
+    }
+
+    public void updateProduct(Product product){
+        customProgressDialog.showProgress(context);
+        String url = DBConfig.ServerURL + "product/update.php";
+        RequestQueue queue = Volley.newRequestQueue(context);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            Toast.makeText(context, "Product updated", Toast.LENGTH_SHORT).show();
+            customProgressDialog.hideProgress();
+        }, error -> {
+            Toast.makeText(context, "An error occured while connecting to server", Toast.LENGTH_SHORT).show();;
+            customProgressDialog.hideProgress();
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<>();
+                map.put("id", Integer.toString(product.getId()));
+                map.put("supId", Integer.toString(product.getSupId()));
+                map.put("catId", Integer.toString(product.getCategoryId()));
+                map.put("prodName", product.getProdName());
+                map.put("prodDesc", product.getProdDesc());
+                map.put("prodQty", Double.toString(product.getProdQty()));
+                map.put("prodPrice", Double.toString(product.getProdPrice()));
+                if (product.getProdImage() != null) {
+                    map.put("prodImage", product.getProdImage());
+                }
                 return map;
             }
         };
@@ -123,8 +155,29 @@ public class ProductServer {
                 e.printStackTrace();
             }
         }, error -> {
-            Toast.makeText(context, "An error occured while connecting to the server", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "An error occurred while connecting to the server", Toast.LENGTH_SHORT).show();
         });
+        queue.add(request);
+    }
+
+    public void deleteProduct(int id) {
+        customProgressDialog.showProgress(context);
+        String url = DBConfig.ServerURL + "product/delete.php";
+        RequestQueue queue = Volley.newRequestQueue(context);
+        StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
+            Toast.makeText(context, "Product Deleted", Toast.LENGTH_SHORT).show();
+            customProgressDialog.hideProgress();
+        }, error -> {
+            Toast.makeText(context, "An error occurred while connecting to the server", Toast.LENGTH_SHORT).show();
+            customProgressDialog.hideProgress();
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<>();
+                map.put("id", String.valueOf(id));
+                return map;
+            }
+        };
         queue.add(request);
     }
 

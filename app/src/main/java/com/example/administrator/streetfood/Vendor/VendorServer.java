@@ -161,7 +161,7 @@ public class VendorServer {
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
                     Product product = new Product();
-                    product.setId(Integer.parseInt(jsonObject.getString("id")));
+                    product.setId(Integer.parseInt(jsonObject.getString("product_id")));
                     product.setSupId(Integer.parseInt(jsonObject.getString("supId")));
                     product.setCategoryId(Integer.parseInt(jsonObject.getString("catId")));
                     product.setProdName(jsonObject.getString("prodName"));

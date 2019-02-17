@@ -70,8 +70,8 @@ public class CustomerOrderNotificationAdapter extends ArrayAdapter<Order> {
                         .placeholder(R.mipmap.ic_launcher_round)
                         .into(viewHolder.orderListViewImage);
                 viewHolder.productName.setText(product.getProdName());
-                viewHolder.productQty.setText(String.format(Locale.getDefault(), ".%2f", order.getOrderQty()));
-                viewHolder.productAmount.setText(String.format(Locale.getDefault(), ".%2f", order.getTotalAmount()));
+                viewHolder.productQty.setText(Double.toString(order.getOrderQty()));
+                viewHolder.productAmount.setText(Double.toString(order.getTotalAmount()));
             }
         });
 

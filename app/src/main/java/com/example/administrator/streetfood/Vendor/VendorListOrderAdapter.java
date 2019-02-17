@@ -64,6 +64,7 @@ public class VendorListOrderAdapter extends ArrayAdapter<Order> {
                 ((VendorActivityDrawer) getContext())
                         .getSupportFragmentManager()
                         .beginTransaction()
+                        .addToBackStack(null)
                         .replace(R.id.vendorContentFrame, vendorTakeOrderFragment)
                         .commit();
             });

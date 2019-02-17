@@ -65,6 +65,7 @@ public class VendorShippingOrderFragment extends Fragment {
             vendorShippingOrderListFragment.setArguments(b);
             ((VendorActivityDrawer) Objects.requireNonNull(getContext())).getSupportFragmentManager()
                     .beginTransaction()
+                    .addToBackStack(null)
                     .replace(R.id.vendorContentFrame, vendorShippingOrderListFragment)
                     .commit();
         });

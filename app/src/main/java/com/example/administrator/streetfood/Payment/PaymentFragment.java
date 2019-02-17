@@ -1,9 +1,6 @@
 package com.example.administrator.streetfood.Payment;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,9 +12,6 @@ import android.widget.Toast;
 
 import com.braintreepayments.api.BraintreeFragment;
 import com.braintreepayments.api.PayPal;
-import com.braintreepayments.api.dropin.DropInActivity;
-import com.braintreepayments.api.dropin.DropInRequest;
-import com.braintreepayments.api.dropin.DropInResult;
 import com.braintreepayments.api.exceptions.BraintreeError;
 import com.braintreepayments.api.exceptions.ErrorWithResponse;
 import com.braintreepayments.api.exceptions.InvalidArgumentException;
@@ -26,7 +20,6 @@ import com.braintreepayments.api.interfaces.BraintreeErrorListener;
 import com.braintreepayments.api.interfaces.PaymentMethodNonceCreatedListener;
 import com.braintreepayments.api.models.PayPalAccountNonce;
 import com.braintreepayments.api.models.PayPalRequest;
-import com.braintreepayments.api.models.PaymentMethodNonce;
 import com.braintreepayments.api.models.PostalAddress;
 import com.example.administrator.streetfood.Order.Order;
 import com.example.administrator.streetfood.Order.OrderServer;
@@ -34,17 +27,11 @@ import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.CustomProgressDialog;
 import com.example.administrator.streetfood.Shared.DBConfig;
 import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
-import com.paypal.android.sdk.data.collector.PayPalDataCollector;
-
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
 import cz.msebera.android.httpclient.Header;

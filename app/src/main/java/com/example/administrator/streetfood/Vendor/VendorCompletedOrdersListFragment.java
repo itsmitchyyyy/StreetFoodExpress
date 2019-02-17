@@ -53,10 +53,18 @@ public class VendorCompletedOrdersListFragment extends Fragment {
             customerEmail.setText(customer.getEmail());
         });
 
-        orderServer.getSelectedCustomerOrders(b.getString("customerId"), list -> {
-            orderList.addAll(list);
-            adapter = new VendorCompletedOrdersListAdapter(getContext(), orderList);
-            completedOrderListView.setAdapter(adapter);
+        orderServer.getSelectedCustomerOrders(uuid, new OrderServer.VolleyCallback() {
+            @Override
+            public void onCustomerOrderListQuery(List<Order> list) {
+                orderList.addAll(list);
+                adapter = new VendorCompletedOrdersListAdapter(getContext(), orderList);
+                completedOrderListView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onUpdateStatus(boolean status) {
+
+            }
         });
 
         return v;

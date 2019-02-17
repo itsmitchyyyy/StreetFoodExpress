@@ -54,6 +54,8 @@ public class AddProductFragment extends Fragment implements View.OnClickListener
     private Uri imagePath;
     private Bitmap bitmap;
     private ProductServer productServer;
+    private Product product;
+    private View addProductView;
 
     public AddProductFragment() {
         // Required empty public constructor
@@ -64,7 +66,7 @@ public class AddProductFragment extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View addProductView =  inflater.inflate(R.layout.fragment_add_product, container, false);
+        addProductView =  inflater.inflate(R.layout.fragment_add_product, container, false);
 
         productServer = new ProductServer(getContext());
 
@@ -101,21 +103,27 @@ public class AddProductFragment extends Fragment implements View.OnClickListener
                 String prodPrice = productPrice.getText().toString();
                 String qtyOnHand = quantityOnHand.getText().toString();
                 String prodDesc = productDesc.getText().toString();
-                Product product = new Product(supId, catId, prodName, prodDesc,
-                        Double.parseDouble(qtyOnHand), Double.parseDouble(prodPrice),
-                        imageToString(bitmap));
-
+                if (bitmap != null) {
+                     product = new Product(supId, catId, prodName, prodDesc,
+                            Double.parseDouble(qtyOnHand), Double.parseDouble(prodPrice),
+                            imageToString(bitmap));
+                } else {
+                    product = new Product(supId, catId, prodName, prodDesc,
+                            Double.parseDouble(qtyOnHand), Double.parseDouble(prodPrice), null);
+                }
                 productServer.addProduct(product);
                 productName.setText("");
                 productPrice.setText("");
                 productDesc.setText("");
                 quantityOnHand.setText("");
                 productImage.setImageResource(R.mipmap.ic_launcher_round);
+                bitmap = null;
                 break;
         }
     }
 
     public void setDropDownCategories() {
+        catList.clear();
         CategoryServer categoryServer = new CategoryServer(getContext());
         categoryServer.getCategories(new CategoryServer.VolleyCallBack() {
             @Override

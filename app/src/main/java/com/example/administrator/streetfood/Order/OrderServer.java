@@ -28,6 +28,7 @@ public class OrderServer {
 
     public interface VolleyCallback {
         void onCustomerOrderListQuery(List<Order> list);
+        void onUpdateStatus(boolean status);
     }
 
     public OrderServer() {
@@ -133,16 +134,18 @@ public class OrderServer {
         queue.add(request);
     }
 
-    public void updateOrder(String uuid, String status){
+    public void updateOrder(String uuid, String status, VolleyCallback volleyCallback){
         customProgressDialog.showProgress(context);
         String url = DBConfig.OrderVendorURL + "accept.php";
         RequestQueue queue = Volley.newRequestQueue(context);
         StringRequest request = new StringRequest(Request.Method.POST, url, response -> {
                 Toast.makeText(context, "Order Updated", Toast.LENGTH_SHORT).show();
+                volleyCallback.onUpdateStatus(true);
                 customProgressDialog.hideProgress();
             }, error -> {
             Toast.makeText(context, "An error occurred while connecting to the server", Toast.LENGTH_SHORT).show();
-                customProgressDialog.hideProgress();
+            volleyCallback.onUpdateStatus(true);
+            customProgressDialog.hideProgress();
             }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {

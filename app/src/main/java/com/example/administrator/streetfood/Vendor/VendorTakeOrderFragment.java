@@ -18,6 +18,7 @@ import com.example.administrator.streetfood.Order.OrderServer;
 import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.Session;
+import com.example.administrator.streetfood.VendorActivityDrawer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,7 +112,23 @@ public class VendorTakeOrderFragment extends Fragment implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button10:
-                orderServer.updateOrder(orderUUID, "1");
+                orderServer.updateOrder(orderUUID, "1", new OrderServer.VolleyCallback() {
+                    @Override
+                    public void onCustomerOrderListQuery(List<Order> list) {
+
+                    }
+
+                    @Override
+                    public void onUpdateStatus(boolean status) {
+                        if (status) {
+                            ((VendorActivityDrawer)getContext())
+                                    .getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.vendorContentFrame, new VendorShippingOrderFragment())
+                                    .commit();
+                        }
+                    }
+                });
                 break;
         }
     }

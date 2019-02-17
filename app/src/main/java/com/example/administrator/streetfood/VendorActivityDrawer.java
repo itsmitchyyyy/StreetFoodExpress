@@ -3,11 +3,14 @@ package com.example.administrator.streetfood;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -25,6 +28,7 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
     private NavigationView navigationView;
     private int backButton = 0;
     private TextView navHeaderText;
+    private ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +49,29 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_nav_menu);
+        actionBar.setHomeButtonEnabled(true);
+        toggle = new ActionBarDrawerToggle(this, mDrawLayout, R.string.drawer_open, R.string.drawer_close) {
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                invalidateOptionsMenu();
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                invalidateOptionsMenu();
+            }
+        };
+
+        mDrawLayout.setDrawerListener(toggle);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new VendorOrderListFragment()).commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .addToBackStack(null)
+                    .replace(R.id.vendorContentFrame, new VendorOrderListFragment())
+                    .commit();
             navigationView.setCheckedItem(R.id.nav_order);
         }
 
@@ -57,6 +80,10 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
         switch (item.getItemId()) {
 //            open the drawer when the user taps on the nav drawer button
             case android.R.id.home:
@@ -72,14 +99,26 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
         mDrawLayout.closeDrawers();
         switch (id) {
             case R.id.nav_order:
-                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new VendorOrderListFragment()).commit();
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.vendorContentFrame, new VendorOrderListFragment())
+                        .commit();
                 break;
             case R.id.nav_product:
 //                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new AddProductFragment()).commit();
-                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new ProductTabFragment()).commit();
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.vendorContentFrame, new ProductTabFragment())
+                        .commit();
                 break;
             case R.id.nav_order_List:
-                getSupportFragmentManager().beginTransaction().replace(R.id.vendorContentFrame, new VendorOrderListTabFragment()).commit();
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.vendorContentFrame, new VendorOrderListTabFragment())
+                        .commit();
                 break;
             case R.id.nav_logout:
                 SharedPreferences sharedPreferences = getSharedPreferences("accountPref", Context.MODE_PRIVATE);
@@ -111,5 +150,17 @@ public class VendorActivityDrawer extends AppCompatActivity implements Navigatio
 //            return;
 //        }
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        toggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        toggle.onConfigurationChanged(newConfig);
     }
 }

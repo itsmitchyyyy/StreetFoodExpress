@@ -28,21 +28,24 @@
                 android:layout_height="wrap_content"
                 android:text="Product Name"
                 android:textColor="@android:color/black"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:textSize="20sp"/>
             <TextView
                 android:id="@+id/orderProductQty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product Quantity"
                 android:textColor="@android:color/black"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:textSize="15sp"/>
             <TextView
                 android:id="@+id/orderProductAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product Amount"
                 android:textColor="@android:color/black"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:textSize="15sp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

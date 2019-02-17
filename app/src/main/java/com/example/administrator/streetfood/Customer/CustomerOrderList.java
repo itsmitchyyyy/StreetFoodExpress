@@ -48,10 +48,18 @@ public class CustomerOrderList extends Fragment {
         orderServer = new OrderServer(getContext());
         session = new Session(getContext(), Server.accountPreferences);
 
-        orderServer.customerOrderList(session.getId(), list -> {
-            orders.addAll(list);
-            adapter = new CustomerOrderListAdapter(getContext(), orders);
-            listView.setAdapter(adapter);
+        orderServer.customerOrderList(session.getId(), new OrderServer.VolleyCallback() {
+            @Override
+            public void onCustomerOrderListQuery(List<Order> list) {
+                orders.addAll(list);
+                adapter = new CustomerOrderListAdapter(getContext(), orders);
+                listView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onUpdateStatus(boolean status) {
+
+            }
         });
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
