@@ -12,6 +12,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.administrator.streetfood.ActivityDrawer;
 import com.example.administrator.streetfood.Customer.Customer;
+import com.example.administrator.streetfood.MainActivity;
 import com.example.administrator.streetfood.Vendor.Vendor;
 import com.example.administrator.streetfood.VendorActivityDrawer;
 
@@ -39,6 +40,7 @@ public class Server {
         editor.putString("id", Integer.toString(users.getId()));
         editor.putString("name", users.getFirstname().concat(users.getLastname()));
         editor.putString("type", users.getType());
+        editor.putString("phone", users.getPhone());
         editor.apply();
     }
 
@@ -57,6 +59,7 @@ public class Server {
                             jsonObject.getString("firstName"), jsonObject.getString("lastName"),
                             jsonObject.getString("userType"));
                     user.setId(Integer.parseInt(jsonObject.getString("id")));
+                    user.setPhone(jsonObject.getString("phone"));
 
                     setSession(user, mContext);
                     if (user.getType().equals("Customer")) {
@@ -98,13 +101,10 @@ public class Server {
                             jsonObject.getString("firstName"), jsonObject.getString("lastName"),
                             jsonObject.getString("userType"));
                     user.setId(Integer.parseInt(jsonObject.getString("id")));
+                    user.setPhone(jsonObject.getString("phone"));
 
                     setSession(user, mContext);
-                    if (user.getType().equals("Customer")) {
-                        mContext.startActivity(new Intent(mContext, ActivityDrawer.class));
-                    } else {
-                        mContext.startActivity(new Intent(mContext, VendorActivityDrawer.class));
-                    }
+                        mContext.startActivity(new Intent(mContext, MainActivity.class));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -125,6 +125,7 @@ public class Server {
                 map.put("email", users.getEmail());
                 map.put("password", users.getPassword());
                 map.put("userType", users.getType());
+                map.put("phone", users.getPhone());
                 return map;
             }
         };

@@ -1,13 +1,20 @@
 package com.example.administrator.streetfood.Payment;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.braintreepayments.api.BraintreeFragment;
@@ -21,11 +28,14 @@ import com.braintreepayments.api.interfaces.PaymentMethodNonceCreatedListener;
 import com.braintreepayments.api.models.PayPalAccountNonce;
 import com.braintreepayments.api.models.PayPalRequest;
 import com.braintreepayments.api.models.PostalAddress;
+import com.example.administrator.streetfood.ActivityDrawer;
+import com.example.administrator.streetfood.Customer.CustomerOrderList;
 import com.example.administrator.streetfood.Order.Order;
 import com.example.administrator.streetfood.Order.OrderServer;
 import com.example.administrator.streetfood.R;
 import com.example.administrator.streetfood.Shared.CustomProgressDialog;
 import com.example.administrator.streetfood.Shared.DBConfig;
+import com.example.administrator.streetfood.Shared.Session;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
@@ -47,6 +57,7 @@ public class PaymentFragment extends Fragment {
     private OrderServer orderServer;
     Order order;
     private String orderTotalAmount;
+    private Session session;
 
     public PaymentFragment() {
         // Required empty public constructor
@@ -58,11 +69,12 @@ public class PaymentFragment extends Fragment {
         paymentView = inflater.inflate(R.layout.activity_payment, container, false);
 
         customProgressDialog = new CustomProgressDialog().getInstance();
+        session = new Session(getContext(), "accountPref");
 
         Bundle b = getArguments();
         if (b.size() > 0) {
             list = (ArrayList<HashMap<String, Integer>>)b.getSerializable("orderDetails");
-            orderTotalAmount = b.getString("orderTotalAmount");
+            orderTotalAmount = b.getString("totalAmount");
         }
 
         orderServer = new OrderServer(getContext());
@@ -72,9 +84,9 @@ public class PaymentFragment extends Fragment {
 
         getClientToken();
 
-        onlinePayment.setOnClickListener(v -> {
-            submitCheckout(getContext());
-        });
+        onlinePayment.setOnClickListener(v -> submitCheckout(getContext()));
+        cashOnDelivery.setOnClickListener(v -> setCashOnDeliveryDialog());
+
         return paymentView;
     }
 
@@ -84,7 +96,8 @@ public class PaymentFragment extends Fragment {
         client.get(DBConfig.ServerURL + "payment/client-token.php", new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-               Log.d("asd", responseString);
+                Toast.makeText(getContext(), "Could not connect to paypal at the moment", Toast.LENGTH_SHORT).show();
+                onlinePayment.setEnabled(false);
                 customProgressDialog.hideProgress();
             }
 
@@ -152,13 +165,14 @@ public class PaymentFragment extends Fragment {
     void postNonceToServer(String nonce) {
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
+        params.put("customerId", session.getId());
+        params.put("payment_method", "Paypal");
         params.put("payment_method_nonce", nonce);
         params.put("amount", orderTotalAmount);
         client.post(DBConfig.ServerURL + "payment/payment.php", params, new TextHttpResponseHandler() {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Log.d("zxc", responseString);
-                Toast.makeText(getContext(), "Payment Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Payment Error: "+responseString, Toast.LENGTH_SHORT).show();
                 customProgressDialog.hideProgress();
             }
 
@@ -176,6 +190,100 @@ public class PaymentFragment extends Fragment {
                 }
                 customProgressDialog.hideProgress();
                 Toast.makeText(getContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
+                Bundle b = new Bundle();
+                b.putString("id", String.valueOf(session.getId()));
+                CustomerOrderList customerOrderList = new CustomerOrderList();
+                customerOrderList.setArguments(b);
+                ((ActivityDrawer)getContext()).
+                        getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.contentFrame, customerOrderList)
+                        .commit();
+            }
+        });
+    }
+
+    public void setCashOnDeliveryDialog() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+        LinearLayout linearLayout = new LinearLayout(getContext());
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.setLayoutParams(layoutParams);
+        linearLayout.setGravity(Gravity.CLIP_VERTICAL);
+        linearLayout.setPadding(2, 2, 2, 2);
+        TextView tv = new TextView(getContext());
+        String totalAmount = "Total Amount: " + orderTotalAmount;
+        tv.setText(totalAmount);
+        tv.setPadding(40, 40, 40, 40);
+        tv.setGravity(Gravity.CENTER);
+        tv.setTextSize(20);
+        EditText et = new EditText(getContext());
+        TextView tv1 = new TextView(getContext());
+        tv1.setText("Address to send");
+        LinearLayout.LayoutParams tv1Params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        tv1Params.bottomMargin = 5;
+        linearLayout.addView(tv1,tv1Params);
+        linearLayout.addView(et, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        alertDialog.setView(linearLayout);
+        alertDialog.setTitle("Cash on Delivery");
+        alertDialog.setCustomTitle(tv);
+
+        alertDialog.setNegativeButton("Cancel", (dialog, whichButton) -> dialog.cancel());
+
+        alertDialog.setPositiveButton("OK", (dialog, which) -> {
+            String address = et.getText().toString();
+            sendCashOnDelivery(address);
+        });
+
+        AlertDialog dialog = alertDialog.create();
+
+        try {
+            dialog.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sendCashOnDelivery(String address) {
+        customProgressDialog.showProgress(getContext());
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+        params.put("customerId", session.getId());
+        params.put("address", address);
+        params.put("payment_method", "COD");
+        params.put("amount", orderTotalAmount);
+        client.post(DBConfig.ServerURL + "payment/payment.php", params, new TextHttpResponseHandler() {
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Toast.makeText(getContext(), "Payment Error: "+responseString, Toast.LENGTH_SHORT).show();
+                customProgressDialog.hideProgress();
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                String uuid = UUID.randomUUID().toString().replaceAll("-","").toUpperCase();
+                for (HashMap<String, Integer> map: list) {
+                    order = new Order();
+                    order.setProdId(map.get("prodId"));
+                    order.setCustomerId(map.get("customerId"));
+                    order.setOrderQty(map.get("orderQty"));
+                    order.setTotalAmount(map.get("totalAmount"));
+                    order.setOrderUuid(uuid);
+                    orderServer.addOrder(order);
+                }
+                customProgressDialog.hideProgress();
+                Toast.makeText(getContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
+                Bundle b = new Bundle();
+                b.putString("id", String.valueOf(session.getId()));
+                CustomerOrderList customerOrderList = new CustomerOrderList();
+                customerOrderList.setArguments(b);
+                ((PaymentActivity)getContext()).
+                        getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.contentFrame, customerOrderList)
+                        .commit();
             }
         });
     }

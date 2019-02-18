@@ -17,6 +17,8 @@ import com.example.administrator.streetfood.Order.Order;
 import com.example.administrator.streetfood.Order.OrderServer;
 import com.example.administrator.streetfood.Product.Product;
 import com.example.administrator.streetfood.R;
+import com.example.administrator.streetfood.Shared.SendMessage;
+import com.example.administrator.streetfood.Shared.Server;
 import com.example.administrator.streetfood.Shared.Session;
 import com.example.administrator.streetfood.VendorActivityDrawer;
 
@@ -43,6 +45,7 @@ public class VendorTakeOrderFragment extends Fragment implements View.OnClickLis
     private double getTotalAmount;
     private String orderUUID;
     private OrderServer orderServer;
+    private SendMessage sendMessage;
 
     public VendorTakeOrderFragment() {
         // Required empty public constructor
@@ -64,6 +67,8 @@ public class VendorTakeOrderFragment extends Fragment implements View.OnClickLis
 
         vendorServer = new VendorServer(getContext());
         orderServer = new OrderServer(getContext());
+
+        sendMessage = new SendMessage(getContext());
 
         getFragmentArguments();
         customerOrders();
@@ -121,6 +126,7 @@ public class VendorTakeOrderFragment extends Fragment implements View.OnClickLis
                     @Override
                     public void onUpdateStatus(boolean status) {
                         if (status) {
+                            sendMessage.sendMessage("Your order has been accepted", session.getPhone());
                             ((VendorActivityDrawer)getContext())
                                     .getSupportFragmentManager()
                                     .beginTransaction()

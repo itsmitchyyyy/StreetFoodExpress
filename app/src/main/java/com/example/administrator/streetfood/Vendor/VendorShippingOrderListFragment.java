@@ -15,6 +15,9 @@ import com.example.administrator.streetfood.Customer.CustomerServer;
 import com.example.administrator.streetfood.Order.Order;
 import com.example.administrator.streetfood.Order.OrderServer;
 import com.example.administrator.streetfood.R;
+import com.example.administrator.streetfood.Shared.SendMessage;
+import com.example.administrator.streetfood.Shared.Server;
+import com.example.administrator.streetfood.Shared.Session;
 import com.example.administrator.streetfood.VendorActivityDrawer;
 import com.squareup.picasso.Picasso;
 
@@ -37,6 +40,8 @@ public class VendorShippingOrderListFragment extends Fragment {
     private VendorShippingOrderListAdapter adapter;
     private Button buttonComplete;
     private String uuid;
+    private SendMessage sendMessage;
+    private Session session;
 
     public VendorShippingOrderListFragment() {
         // Required empty public constructor
@@ -54,6 +59,9 @@ public class VendorShippingOrderListFragment extends Fragment {
         customerEmail = v.findViewById(R.id.customerEmail);
         buttonComplete = v.findViewById(R.id.button17);
 
+        sendMessage = new SendMessage(getContext());
+        session = new Session(getContext(), Server.accountPreferences);
+
         Bundle b = getArguments();
         customerServer = new CustomerServer(getContext());
         orderServer = new OrderServer(getContext());
@@ -68,7 +76,7 @@ public class VendorShippingOrderListFragment extends Fragment {
             customerEmail.setText(customer.getEmail());
         });
 
-        orderServer.getSelectedCustomerOrders(b.getString("customerId"), new OrderServer.VolleyCallback() {
+        orderServer.getSelectedCustomerOrders(uuid, new OrderServer.VolleyCallback() {
             @Override
             public void onCustomerOrderListQuery(List<Order> list) {
                 orderList.addAll(list);
@@ -92,6 +100,7 @@ public class VendorShippingOrderListFragment extends Fragment {
                 @Override
                 public void onUpdateStatus(boolean status) {
                     if (status) {
+                        sendMessage.sendMessage("Your order has been delivered", session.getPhone());
                         ((VendorActivityDrawer)getContext())
                                 .getSupportFragmentManager()
                                 .beginTransaction()

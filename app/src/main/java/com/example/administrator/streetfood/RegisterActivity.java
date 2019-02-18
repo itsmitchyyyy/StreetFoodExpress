@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     Button backBtn, nextBtn, stepOne, stepTwo;
     LinearLayout frstStep, scndStep;
-    EditText birthDate, firstName, lastName, emailAddress, password, confirmPassword;
+    EditText birthDate, firstName, lastName, emailAddress, password, confirmPassword, tinNumber, phoneNumber;
     RadioGroup radioGroup, radioGroupType;
     RadioButton radioGenderButton, radioUserTypeButton;
     private int currentStep = 1;
@@ -59,6 +59,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         password = this.findViewById(R.id.editText8);
         radioGroup = this.findViewById(R.id.radioGroup);
         birthDate = this.findViewById(R.id.editText7);
+        tinNumber = this.findViewById(R.id.tinEditNumber);
+        phoneNumber = this.findViewById(R.id.editTexPhone);
         radioGroupType = this.findViewById(R.id.radioGroupType);
         confirmPassword = this.findViewById(R.id.editTextConfirmPassword);
 
@@ -73,6 +75,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         emailAddress.addTextChangedListener(textWatcher);
         password.addTextChangedListener(textWatcher);
         birthDate.addTextChangedListener(textWatcher);
+        tinNumber.addTextChangedListener(textWatcher);
+        phoneNumber.addTextChangedListener(textWatcher);
 
     }
 
@@ -82,7 +86,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             if(frstStep.getVisibility() == View.VISIBLE){
                 if (!firstName.getText().toString().isEmpty() ||
                         !lastName.getText().toString().isEmpty() ||
-                        birthDate.getText().toString().isEmpty()){
+                        !birthDate.getText().toString().isEmpty() ||
+                        !tinNumber.getText().toString().isEmpty()){
                     nextBtn.setEnabled(true);
                 }
             }
@@ -99,7 +104,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 if (firstName.getText().toString().isEmpty() ||
                         lastName.getText().toString().isEmpty() ||
                         radioGroup.getCheckedRadioButtonId() == -1 ||
-                        birthDate.getText().toString().isEmpty()
+                        birthDate.getText().toString().isEmpty() ||
+                        tinNumber.getText().toString().isEmpty()
                         ){
                     nextBtn.setEnabled(false);
                 } else {
@@ -109,6 +115,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             else if (scndStep.getVisibility() == View.VISIBLE) {
                 if (emailAddress.getText().toString().isEmpty() ||
                         password.getText().toString().isEmpty() ||
+                        phoneNumber.getText().toString().isEmpty() ||
                         radioGroupType.getCheckedRadioButtonId() == -1 ||
                         confirmPassword.getText().toString().isEmpty()){
                     nextBtn.setEnabled(false);
@@ -126,11 +133,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         final String bday = birthDate.getText().toString();
         final String pass = password.getText().toString();
         final String conPassword = confirmPassword.getText().toString();
+        String phone = phoneNumber.getText().toString();
 
         if(conPassword.equals(pass)) {
             url = DBConfig.ServerURL + "user/insert.php";
 
             Users users = new Users(email, pass, gender, bday, frstName, lstName, userType);
+            users.setPhone(phone);
             server.sendRequest(url, users);
 
         } else {

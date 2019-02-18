@@ -2,7 +2,7 @@ package com.example.administrator.streetfood.Shared;
 
 public class Users {
     private int id;
-    private String email, password, gender, birthdate, firstname, lastname, type;
+    private String email, password, gender, birthdate, firstname, lastname, type, phone;
 
     public Users() {
     }
@@ -79,5 +79,13 @@ public class Users {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

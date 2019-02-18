@@ -1313,6 +1313,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id editTexPhone
 id editText
 id editText15
 id editText16
@@ -1526,11 +1527,14 @@ id textView6
 id textView7
 id textView8
 id textView9
+id textViewPhone
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
 id time
+id tinEditNumber
+id tinNumber
 id title
 id titleDividerNoCustom
 id title_template
@@ -1560,6 +1564,7 @@ id updateTextView27
 id updateTextView29
 id updateTextView30
 id useLogo
+id uuidTextView
 id vendorButton
 id vendorContentFrame
 id vendorListView

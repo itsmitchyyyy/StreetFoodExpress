@@ -24,4 +24,7 @@ public class Session {
     public String getName() {
         return sharedPreferences.getString("name", null);
     }
+
+    public String getPhone() { return sharedPreferences.getString("phone", null); }
+
 }

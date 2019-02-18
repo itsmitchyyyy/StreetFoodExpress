@@ -16,13 +16,16 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.braintreepayments.api.BraintreeFragment;
 import com.braintreepayments.api.exceptions.InvalidArgumentException;
+import com.example.administrator.streetfood.Customer.CustomerOrderList;
 import com.example.administrator.streetfood.MainActivity;
 import com.example.administrator.streetfood.Order.OrderFragment;
 import com.example.administrator.streetfood.R;
+import com.example.administrator.streetfood.Shared.Session;
 
 public class PaymentActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -30,11 +33,19 @@ public class PaymentActivity extends AppCompatActivity implements NavigationView
     NavigationView navigationView;
     Toolbar toolbar;
     private ActionBarDrawerToggle toggle;
+    private TextView navHeaderText;
+    private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
+
+        session = new Session(getApplicationContext(), "accountPref");
+
+        navigationView = findViewById(R.id.navView);
+        View navHeader = navigationView.inflateHeaderView(R.layout.nav_header_layout);
+        navHeaderText = navHeader.findViewById(R.id.navHeaderText);
 
         Bundle b = getIntent().getExtras();
         assert b != null;
@@ -105,6 +116,17 @@ public class PaymentActivity extends AppCompatActivity implements NavigationView
                         .beginTransaction()
                         .addToBackStack(null)
                         .replace(R.id.contentFrame, new OrderFragment())
+                        .commit();
+                break;
+            case R.id.nav_order_list:
+                Bundle b = new Bundle();
+                b.putString("id", String.valueOf(session.getId()));
+                CustomerOrderList customerOrderList = new CustomerOrderList();
+                customerOrderList.setArguments(b);
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.contentFrame, customerOrderList)
                         .commit();
                 break;
             case R.id.nav_logout:

@@ -37,7 +37,7 @@
             android:textStyle="bold"
             android:layout_weight="1"
             android:background="@drawable/rounded_button"
-            android:text="Shipping" />
+            android:text="Delivering" />
 
         <Button
             android:layout_width="40dp"
@@ -50,7 +50,7 @@
             android:textStyle="bold"
             android:layout_weight="1"
             android:background="@drawable/rounded_button"
-            android:text="Completed" />
+            android:text="Delivered" />
     </LinearLayout>
 
     <LinearLayout

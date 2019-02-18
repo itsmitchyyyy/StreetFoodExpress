@@ -43,6 +43,7 @@ public class VendorListOrderAdapter extends ArrayAdapter<Order> {
             viewHolder.orderName = convertView.findViewById(R.id.textView15);
             viewHolder.orderDate = convertView.findViewById(R.id.textView16);
             viewHolder.btnTakeOrder = convertView.findViewById(R.id.button9);
+            viewHolder.uuid = convertView.findViewById(R.id.uuidTextView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -53,6 +54,7 @@ public class VendorListOrderAdapter extends ArrayAdapter<Order> {
 //          viewHolder.orderImage.setImageResource();
             viewHolder.orderName.setText(customer.getFirstname().concat(customer.getLastname()));
             viewHolder.orderDate.setText(order.getOrderDate());
+            viewHolder.uuid.setText(order.getOrderUuid());
             viewHolder.btnTakeOrder.setOnClickListener(v -> {
                 Bundle b = new Bundle();
                 b.putInt("id", order.getCustomerId());
@@ -77,7 +79,7 @@ public class VendorListOrderAdapter extends ArrayAdapter<Order> {
 
     static class ViewHolder {
         ImageView orderImage;
-        TextView orderDate, orderName;
+        TextView orderDate, orderName, uuid;
         Button btnTakeOrder;
     }
 }
